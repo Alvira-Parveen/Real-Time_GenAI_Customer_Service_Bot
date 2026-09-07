@@ -1,0 +1,30 @@
+# Product Information Catalog - ApexTech Electronics
+
+1. Apex Pro Wireless Noise-Cancelling Headphones (Model: AP-WH100)
+- Price: $199.99
+- Battery Life: 40 hours with ANC off, 30 hours with ANC active. Fast charge: 10 minutes gives 5 hours playback.
+- Connectivity: Bluetooth 5.3, multipoint connection (connects to 2 devices simultaneously), 3.5mm audio jack included.
+- Features: Active Noise Cancellation (ANC), Transparency Mode, 40mm Titanium drivers, built-in mic array with beamforming noise reduction.
+- Warranty: 1-Year Limited Manufacturer Warranty.
+
+2. Apex SmartWatch Ultra (Model: AP-SW200)
+- Price: $249.99
+- Display: 1.9-inch AMOLED Always-On Retina Display, 1000 nits peak brightness.
+- Sensors: SpO2 blood oxygen monitor, optical heart rate sensor, ECG sensor, GPS/GLONASS, sleep tracker, skin temperature sensor.
+- Water Resistance: 5 ATM (water resistant up to 50 meters, suitable for swimming).
+- Battery Life: Up to 5 days normal usage, 14 days in battery saver mode.
+- Compatibility: iOS 14+ and Android 9.0+.
+
+3. Apex UltraBook 14 Laptop (Model: AP-UB14)
+- Price: $899.99
+- Processor: 12th Gen Intel Core i7 / AMD Ryzen 7 options.
+- Memory & Storage: 16GB LPDDR5 RAM, 512GB NVMe M.2 SSD (expandable up to 2TB).
+- Screen: 14-inch 2.8K OLED Display (2880 x 1800), 90Hz refresh rate, 100% DCI-P3 color gamut.
+- Ports: 2x Thunderbolt 4, 1x USB-A 3.2, 1x HDMI 2.1, 3.5mm combo audio jack, MicroSD slot.
+- Weight: 1.25 kg (2.75 lbs), battery life up to 12 hours.
+
+4. Apex MagFast 3-in-1 Wireless Charging Stand (Model: AP-MC30)
+- Price: $59.99
+- Output: 15W Fast Charge for Smartphones, 5W for SmartWatch, 5W for Earbuds.
+- Safety: Foreign object detection, over-temperature protection, surge protection.
+- In the Box: Charging stand, 30W USB-C PD power adapter, 1.5m braided cable.

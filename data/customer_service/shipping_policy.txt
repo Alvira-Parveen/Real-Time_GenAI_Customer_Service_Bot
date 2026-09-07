@@ -1,0 +1,20 @@
+# Shipping and Delivery Policy - ApexTech Demo Store
+
+1. Shipping Options and Rates
+- Standard Ground Shipping: 3-5 business days. Free for orders over $50; flat rate $4.99 for orders under $50.
+- Expedited Priority Shipping: 2 business days. Flat rate $12.99.
+- Overnight Express Shipping: 1 business day (order placed by 1:00 PM EST). Flat rate $24.99.
+- International Shipping: 7-14 business days to over 45 countries. Calculated at checkout based on destination and weight.
+
+2. Order Processing Schedule
+Orders are processed Monday through Friday, excluding major federal holidays. Orders received by 2:00 PM EST typically ship the same day. Orders placed over the weekend ship the following Monday.
+
+3. Package Tracking
+Real-time tracking is provided for all shipments via FedEx, UPS, and USPS. You will receive an SMS and email notification with tracking numbers upon carrier pickup.
+
+4. Lost, Stolen, or Delayed Packages
+- If tracking shows "Delivered" but you cannot locate the package, please check with neighbors and building management, then wait 24 hours as carriers occasionally scan packages prematurely.
+- If a package remains unlocated 48 hours after marked delivery, contact support or notify this bot to open a formal carrier lost package investigation and dispatch a replacement.
+
+5. Address Corrections
+Address corrections can be made free of charge within 2 hours of order placement. Once handed over to the courier, rerouting fees of $15 may be charged by the carrier.

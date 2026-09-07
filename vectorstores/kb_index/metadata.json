@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "total_documents": 5,
+    "total_chunks": 22,
+    "last_updated": "2026-09-07 22:46:32",
+    "indexed_sources": [
+      "faq.txt",
+      "product_information.txt",
+      "refund_policy.txt",
+      "shipping_policy.txt",
+      "warranty_terms.txt"
+    ]
+  },
+  "chunks": [
+    {
+      "chunk_id": "faq.txt_chunk_0",
+      "text": "# Frequently Asked Questions (FAQ) - ApexTech Demo Store\n\nQ: What are your operating hours for customer support?\nA: Our customer support team is available Monday through Friday from 8:00 AM to 8:00 PM EST, and Saturday from 9:00 AM to 5:00 PM EST. Chat support operates 24/7 through our AI assistant.",
+      "chunk_index": 0,
+      "source": "faq.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+      "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
+      "char_len": 300
+    },
+    {
+      "chunk_id": "faq.txt_chunk_1",
+      "text": ":00 AM to 5:00 PM EST. Chat support operates 24/7 through our AI assistant.\n\nQ: How can I contact human customer service?\nA: You can reach a human representative by emailing support@apextech-demo.com, calling 1-800-555-APEX (2739), or by typing \"representative\" or \"human agent\" in this chat.\n\nQ: Do you offer international customer support?\nA: Yes, our AI chatbot provides multilingual support in English, Spanish, French, and Hindi. Phone support is currently available in English and Spanish.",
+      "chunk_index": 1,
+      "source": "faq.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+      "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
+      "char_len": 495
+    },
+    {
+      "chunk_id": "faq.txt_chunk_2",
+      "text": "ch, and Hindi. Phone support is currently available in English and Spanish.\n\nQ: Can I change or cancel my order after placing it?\nA: Orders can be modified or cancelled within 2 hours of placement through your account dashboard. After 2 hours, the order enters fulfillment and cannot be changed, but you may return it upon receipt.",
+      "chunk_index": 2,
+      "source": "faq.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+      "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
+      "char_len": 331
+    },
+    {
+      "chunk_id": "faq.txt_chunk_3",
+      "text": "ters fulfillment and cannot be changed, but you may return it upon receipt.\n\nQ: How do I track my order status?\nA: Once your order ships, you will receive a tracking link via email. You can also ask this customer service bot with your order number (e.g., \"Where is order #ORD-8492?\").",
+      "chunk_index": 3,
+      "source": "faq.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+      "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
+      "char_len": 284
+    },
+    {
+      "chunk_id": "faq.txt_chunk_4",
+      "text": "mer service bot with your order number (e.g., \"Where is order #ORD-8492?\").\n\nQ: Do you offer discounts for students or military personnel?\nA: Yes, verified students and active-duty military personnel receive a 15% discount on all eligible ApexTech electronics and accessories. Verification is processed via SheerID at checkout.\n\nQ: What payment methods are accepted?\nA: We accept Visa, MasterCard, American Express, PayPal, Apple Pay, Google Pay, and ApexTech Gift Cards.",
+      "chunk_index": 4,
+      "source": "faq.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+      "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
+      "char_len": 471
+    },
+    {
+      "chunk_id": "product_information.txt_chunk_0",
+      "text": "# Product Information Catalog - ApexTech Electronics",
+      "chunk_index": 0,
+      "source": "product_information.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+      "file_hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
+      "char_len": 52
+    },
+    {
+      "chunk_id": "product_information.txt_chunk_1",
+      "text": "1. Apex Pro Wireless Noise-Cancelling Headphones (Model: AP-WH100)\n- Price: $199.99\n- Battery Life: 40 hours with ANC off, 30 hours with ANC active. Fast charge: 10 minutes gives 5 hours playback.\n- Connectivity: Bluetooth 5.3, multipoint connection (connects to 2 devices simultaneously), 3.5mm audio jack included.\n- Features: Active Noise Cancellation (ANC), Transparency Mode, 40mm Titanium drivers, built-in mic array with beamforming noise reduction.\n- Warranty: 1-Year Limited Manufacturer Warranty.",
+      "chunk_index": 1,
+      "source": "product_information.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+      "file_hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
+      "char_len": 506
+    },
+    {
+      "chunk_id": "product_information.txt_chunk_2",
+      "text": "mforming noise reduction.\n- Warranty: 1-Year Limited Manufacturer Warranty.\n\n2. Apex SmartWatch Ultra (Model: AP-SW200)\n- Price: $249.99\n- Display: 1.9-inch AMOLED Always-On Retina Display, 1000 nits peak brightness.\n- Sensors: SpO2 blood oxygen monitor, optical heart rate sensor, ECG sensor, GPS/GLONASS, sleep tracker, skin temperature sensor.\n- Water Resistance: 5 ATM (water resistant up to 50 meters, suitable for swimming).\n- Battery Life: Up to 5 days normal usage, 14 days in battery saver mode.\n- Compatibility: iOS 14+ and Android 9.0+.",
+      "chunk_index": 2,
+      "source": "product_information.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+      "file_hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
+      "char_len": 547
+    },
+    {
+      "chunk_id": "product_information.txt_chunk_3",
+      "text": ", 14 days in battery saver mode.\n- Compatibility: iOS 14+ and Android 9.0+.\n\n3. Apex UltraBook 14 Laptop (Model: AP-UB14)\n- Price: $899.99\n- Processor: 12th Gen Intel Core i7 / AMD Ryzen 7 options.\n- Memory & Storage: 16GB LPDDR5 RAM, 512GB NVMe M.2 SSD (expandable up to 2TB).\n- Screen: 14-inch 2.8K OLED Display (2880 x 1800), 90Hz refresh rate, 100% DCI-P3 color gamut.\n- Ports: 2x Thunderbolt 4, 1x USB-A 3.2, 1x HDMI 2.1, 3.5mm combo audio jack, MicroSD slot.\n- Weight: 1.25 kg (2.75 lbs), battery life up to 12 hours.",
+      "chunk_index": 3,
+      "source": "product_information.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+      "file_hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
+      "char_len": 523
+    },
+    {
+      "chunk_id": "product_information.txt_chunk_4",
+      "text": "k, MicroSD slot.\n- Weight: 1.25 kg (2.75 lbs), battery life up to 12 hours.\n\n4. Apex MagFast 3-in-1 Wireless Charging Stand (Model: AP-MC30)\n- Price: $59.99\n- Output: 15W Fast Charge for Smartphones, 5W for SmartWatch, 5W for Earbuds.\n- Safety: Foreign object detection, over-temperature protection, surge protection.\n- In the Box: Charging stand, 30W USB-C PD power adapter, 1.5m braided cable.",
+      "chunk_index": 4,
+      "source": "product_information.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+      "file_hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
+      "char_len": 395
+    },
+    {
+      "chunk_id": "refund_policy.txt_chunk_0",
+      "text": "# Return and Refund Policy - ApexTech Demo Store\n\n1. Return Window\nCustomers may return eligible items within 30 calendar days of delivery date for a full refund or exchange. Items must be in original condition, including packaging, manuals, accessories, and documentation.",
+      "chunk_index": 0,
+      "source": "refund_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+      "file_hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
+      "char_len": 273
+    },
+    {
+      "chunk_id": "refund_policy.txt_chunk_1",
+      "text": "al condition, including packaging, manuals, accessories, and documentation.\n\n2. Non-Returnable Items\nThe following products are strictly non-returnable:\n- Downloadable software licenses and digital gift cards\n- Consumable items (thermal paste, cleaning kits) once unsealed\n- Custom-built or personalized computer configurations\n- Products marked \"Final Sale\" or \"As-Is Clearance\"",
+      "chunk_index": 1,
+      "source": "refund_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+      "file_hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
+      "char_len": 379
+    },
+    {
+      "chunk_id": "refund_policy.txt_chunk_2",
+      "text": "computer configurations\n- Products marked \"Final Sale\" or \"As-Is Clearance\"\n\n3. Return Shipping Costs\n- Defective or Damaged Products: ApexTech provides a prepaid return shipping label.\n- Buyer's Remorse or Change of Mind: Return shipping fee of $7.99 will be deducted from the total refund amount.",
+      "chunk_index": 2,
+      "source": "refund_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+      "file_hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
+      "char_len": 298
+    },
+    {
+      "chunk_id": "refund_policy.txt_chunk_3",
+      "text": "Return shipping fee of $7.99 will be deducted from the total refund amount.\n\n4. Refund Processing Time\nOnce our return inspection center receives your item, allow 3 to 5 business days for quality inspection. After approval:\n- Credit/Debit Cards: 3-7 business days depending on your banking institution.\n- PayPal / Digital Wallets: 24 to 48 hours.\n- Store Credit / Gift Cards: Instant credited upon approval.",
+      "chunk_index": 3,
+      "source": "refund_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+      "file_hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
+      "char_len": 407
+    },
+    {
+      "chunk_id": "refund_policy.txt_chunk_4",
+      "text": "4 to 48 hours.\n- Store Credit / Gift Cards: Instant credited upon approval.\n\n5. Restocking Fees\nA 15% restocking fee applies only to opened electronics returned without original packaging or missing secondary accessories.\n\n6. Damaged or Defective Items upon Delivery\nIf your order arrives damaged, broken, or malfunctioning, please take clear photos and upload them to our customer service chatbot within 48 hours of delivery for immediate replacement or expedited refund.",
+      "chunk_index": 4,
+      "source": "refund_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+      "file_hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
+      "char_len": 472
+    },
+    {
+      "chunk_id": "shipping_policy.txt_chunk_0",
+      "text": "# Shipping and Delivery Policy - ApexTech Demo Store\n\n1. Shipping Options and Rates\n- Standard Ground Shipping: 3-5 business days. Free for orders over $50; flat rate $4.99 for orders under $50.\n- Expedited Priority Shipping: 2 business days. Flat rate $12.99.\n- Overnight Express Shipping: 1 business day (order placed by 1:00 PM EST). Flat rate $24.99.\n- International Shipping: 7-14 business days to over 45 countries. Calculated at checkout based on destination and weight.",
+      "chunk_index": 0,
+      "source": "shipping_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/shipping_policy.txt",
+      "file_hash": "ada01405b1873689ccfc13238e51d17dedde6fdd3558f111b302be9d1e380737",
+      "char_len": 477
+    },
+    {
+      "chunk_id": "shipping_policy.txt_chunk_1",
+      "text": "over 45 countries. Calculated at checkout based on destination and weight.\n\n2. Order Processing Schedule\nOrders are processed Monday through Friday, excluding major federal holidays. Orders received by 2:00 PM EST typically ship the same day. Orders placed over the weekend ship the following Monday.\n\n3. Package Tracking\nReal-time tracking is provided for all shipments via FedEx, UPS, and USPS. You will receive an SMS and email notification with tracking numbers upon carrier pickup.",
+      "chunk_index": 1,
+      "source": "shipping_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/shipping_policy.txt",
+      "file_hash": "ada01405b1873689ccfc13238e51d17dedde6fdd3558f111b302be9d1e380737",
+      "char_len": 486
+    },
+    {
+      "chunk_id": "shipping_policy.txt_chunk_2",
+      "text": "ve an SMS and email notification with tracking numbers upon carrier pickup.\n\n4. Lost, Stolen, or Delayed Packages\n- If tracking shows \"Delivered\" but you cannot locate the package, please check with neighbors and building management, then wait 24 hours as carriers occasionally scan packages prematurely.\n- If a package remains unlocated 48 hours after marked delivery, contact support or notify this bot to open a formal carrier lost package investigation and dispatch a replacement.",
+      "chunk_index": 2,
+      "source": "shipping_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/shipping_policy.txt",
+      "file_hash": "ada01405b1873689ccfc13238e51d17dedde6fdd3558f111b302be9d1e380737",
+      "char_len": 484
+    },
+    {
+      "chunk_id": "shipping_policy.txt_chunk_3",
+      "text": "pen a formal carrier lost package investigation and dispatch a replacement.\n\n5. Address Corrections\nAddress corrections can be made free of charge within 2 hours of order placement. Once handed over to the courier, rerouting fees of $15 may be charged by the carrier.",
+      "chunk_index": 3,
+      "source": "shipping_policy.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/shipping_policy.txt",
+      "file_hash": "ada01405b1873689ccfc13238e51d17dedde6fdd3558f111b302be9d1e380737",
+      "char_len": 267
+    },
+    {
+      "chunk_id": "warranty_terms.txt_chunk_0",
+      "text": "# Extended Warranty and Protection Plan - ApexCare Protection\n\n1. ApexCare Coverage Overview\nApexCare is our premium accidental damage protection and extended warranty service available for all ApexTech devices. It extends the standard 1-year warranty to 3 full years of comprehensive coverage.",
+      "chunk_index": 0,
+      "source": "warranty_terms.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/warranty_terms.txt",
+      "file_hash": "7ec7d3bfbc0422e208d3d73ebdc53adf44a6e886771bb1a4835776948c6f837a",
+      "char_len": 294
+    },
+    {
+      "chunk_id": "warranty_terms.txt_chunk_1",
+      "text": "nds the standard 1-year warranty to 3 full years of comprehensive coverage.\n\n2. Accidental Damage Coverage\nApexCare covers:\n- Cracked screens and liquid spills\n- Accidental drops and structural housing cracks\n- Power surge failures and battery degradation below 80% original capacity\n- Unlimited claims per year with a nominal $29 deductible for repairs or $49 for complete unit replacement.",
+      "chunk_index": 1,
+      "source": "warranty_terms.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/warranty_terms.txt",
+      "file_hash": "7ec7d3bfbc0422e208d3d73ebdc53adf44a6e886771bb1a4835776948c6f837a",
+      "char_len": 391
+    },
+    {
+      "chunk_id": "warranty_terms.txt_chunk_2",
+      "text": "a nominal $29 deductible for repairs or $49 for complete unit replacement.\n\n3. Filing an ApexCare Claim\nClaims can be initiated directly through this chatbot by saying \"file warranty claim\" or by visiting warranty.apextech-demo.com. A prepaid overnight shipping box will be dispatched within 24 hours.\n\n4. Transferability and Cancellation\nApexCare can be transferred to a new owner if you sell your device, and can be cancelled within 60 days of purchase for a 100% prorated refund.",
+      "chunk_index": 2,
+      "source": "warranty_terms.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/warranty_terms.txt",
+      "file_hash": "7ec7d3bfbc0422e208d3d73ebdc53adf44a6e886771bb1a4835776948c6f837a",
+      "char_len": 482
+    }
+  ]
+}

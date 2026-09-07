@@ -1,0 +1,22 @@
+# Frequently Asked Questions (FAQ) - ApexTech Demo Store
+
+Q: What are your operating hours for customer support?
+A: Our customer support team is available Monday through Friday from 8:00 AM to 8:00 PM EST, and Saturday from 9:00 AM to 5:00 PM EST. Chat support operates 24/7 through our AI assistant.
+
+Q: How can I contact human customer service?
+A: You can reach a human representative by emailing support@apextech-demo.com, calling 1-800-555-APEX (2739), or by typing "representative" or "human agent" in this chat.
+
+Q: Do you offer international customer support?
+A: Yes, our AI chatbot provides multilingual support in English, Spanish, French, and Hindi. Phone support is currently available in English and Spanish.
+
+Q: Can I change or cancel my order after placing it?
+A: Orders can be modified or cancelled within 2 hours of placement through your account dashboard. After 2 hours, the order enters fulfillment and cannot be changed, but you may return it upon receipt.
+
+Q: How do I track my order status?
+A: Once your order ships, you will receive a tracking link via email. You can also ask this customer service bot with your order number (e.g., "Where is order #ORD-8492?").
+
+Q: Do you offer discounts for students or military personnel?
+A: Yes, verified students and active-duty military personnel receive a 15% discount on all eligible ApexTech electronics and accessories. Verification is processed via SheerID at checkout.
+
+Q: What payment methods are accepted?
+A: We accept Visa, MasterCard, American Express, PayPal, Apple Pay, Google Pay, and ApexTech Gift Cards.

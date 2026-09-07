@@ -1,0 +1,868 @@
+[
+  {
+    "id": "1706.03762",
+    "title": "Attention Is All You Need",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N. Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2017-06-12",
+    "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU.",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "pdf_url": "https://arxiv.org/pdf/1706.03762.pdf"
+  },
+  {
+    "id": "1810.04805",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "authors": [
+      "Jacob Devlin",
+      "Ming-Wei Chang",
+      "Kenton Lee",
+      "Kristina Toutanova"
+    ],
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2018-10-11",
+    "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications.",
+    "url": "https://arxiv.org/abs/1810.04805",
+    "pdf_url": "https://arxiv.org/pdf/1810.04805.pdf"
+  },
+  {
+    "id": "2010.11929",
+    "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+    "authors": [
+      "Alexey Dosovitskiy",
+      "Lucas Beyer",
+      "Alexander Kolesnikov",
+      "Dirk Weissenborn",
+      "Xiaohua Zhai",
+      "Thomas Unterthiner",
+      "Mostafa Dehghani",
+      "Matthias Minderer",
+      "Georg Heigold",
+      "Sylvain Gelly",
+      "Jakob Uszkoreit",
+      "Neil Houlsby"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2020-10-22",
+    "abstract": "While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks, or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources to train.",
+    "url": "https://arxiv.org/abs/2010.11929",
+    "pdf_url": "https://arxiv.org/pdf/2010.11929.pdf"
+  },
+  {
+    "id": "2005.14165",
+    "title": "Language Models are Few-Shot Learners",
+    "authors": [
+      "Tom B. Brown",
+      "Benjamin Mann",
+      "Nick Ryder",
+      "Melanie Subbiah",
+      "Jared Kaplan",
+      "Prafulla Dhariwal",
+      "Arvind Neelakantan",
+      "Pranav Shyam",
+      "Girish Sastry",
+      "Amanda Askell",
+      "Sandhini Agarwal",
+      "Ariel Herbert-Voss",
+      "Gretchen Krueger",
+      "Tom Henighan",
+      "Rewon Child",
+      "Aditya Ramesh",
+      "Daniel M. Ziegler",
+      "Jeffrey Wu",
+      "Clemens Winter",
+      "Christopher Hesse",
+      "Mark Chen",
+      "Eric Sigler",
+      "Mateusz Litwin",
+      "Scott Gray",
+      "Benjamin Chess",
+      "Jack Clark",
+      "Christopher Berner",
+      "Sam McCandlish",
+      "Alec Radford",
+      "Ilya Sutskever",
+      "Dario Amodei"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2020-05-28",
+    "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. We train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "pdf_url": "https://arxiv.org/pdf/2005.14165.pdf"
+  },
+  {
+    "id": "2005.11401",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": [
+      "Patrick Lewis",
+      "Ethan Perez",
+      "Aleksandra Piktus",
+      "Fabio Petroni",
+      "Vladimir Karpukhin",
+      "Naman Goyal",
+      "Heinrich Küttler",
+      "Mike Lewis",
+      "Wen-tau Yih",
+      "Tim Rocktäschel",
+      "Sebastian Riedel",
+      "Douwe Kiela"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2020-05-22",
+    "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and they often hallucinate incorrect facts. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) - models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever.",
+    "url": "https://arxiv.org/abs/2005.11401",
+    "pdf_url": "https://arxiv.org/pdf/2005.11401.pdf"
+  },
+  {
+    "id": "2106.09685",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors": [
+      "Edward J. Hu",
+      "Yelong Shen",
+      "Phillip Wallis",
+      "Zeyuan Allen-Zhu",
+      "Yuanzhi Li",
+      "Shean Wang",
+      "Lu Wang",
+      "Weizhu Chen"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2021-06-17",
+    "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. LoRA can reduce the number of trainable parameters by 10,000 times and GPU memory requirements by 3 times compared to full fine-tuning.",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "pdf_url": "https://arxiv.org/pdf/2106.09685.pdf"
+  },
+  {
+    "id": "2305.18290",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "authors": [
+      "Rafael Rafailov",
+      "Archit Sharma",
+      "Eric Mitchell",
+      "Stefano Ermon",
+      "Christopher D. Manning",
+      "Chelsea Finn"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "published": "2023-05-29",
+    "abstract": "While large-scale unsupervised language models learn broad world knowledge and reasoning capabilities, controlling their behavior precisely through reinforcement learning from human feedback (RLHF) has proven complex and unstable. We propose Direct Preference Optimization (DPO), an algorithm that implicitly optimizes the same objective as existing RLHF algorithms (reward maximization with a KL penalty) but is simple to train and eliminates the need to fit a separate reward model or sample from the LM during training.",
+    "url": "https://arxiv.org/abs/2305.18290",
+    "pdf_url": "https://arxiv.org/pdf/2305.18290.pdf"
+  },
+  {
+    "id": "1512.03385",
+    "title": "Deep Residual Learning for Image Recognition",
+    "authors": [
+      "Kaiming He",
+      "Xiangyu Zhang",
+      "Shaoqing Ren",
+      "Jian Sun"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "published": "2015-12-10",
+    "abstract": "Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those previously used. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity.",
+    "url": "https://arxiv.org/abs/1512.03385",
+    "pdf_url": "https://arxiv.org/pdf/1512.03385.pdf"
+  },
+  {
+    "id": "2203.02155",
+    "title": "Training language models to follow instructions with human feedback",
+    "authors": [
+      "Long Ouyang",
+      "Jeff Wu",
+      "Xu Jiang",
+      "Diogo Almeida",
+      "Carroll L. Wainwright",
+      "Pamela Mishkin",
+      "Chong Zhang",
+      "Sandhini Agarwal",
+      "Katarina Slama",
+      "Alex Ray",
+      "John Schulman",
+      "Jacob Hilton",
+      "Fraser Kelton",
+      "Luke Miller",
+      "Maddie Simens",
+      "Amanda Askell",
+      "Peter Welinder",
+      "Paul Christiano",
+      "Jan Leike",
+      "Ryan Lowe"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2022-03-04",
+    "abstract": "Making language models larger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. We show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback (RLHF). We call the resulting models InstructGPT.",
+    "url": "https://arxiv.org/abs/2203.02155",
+    "pdf_url": "https://arxiv.org/pdf/2203.02155.pdf"
+  },
+  {
+    "id": "2103.00020",
+    "title": "Learning Transferable Visual Models From Natural Language Supervision",
+    "authors": [
+      "Alec Radford",
+      "Jong Wook Kim",
+      "Chris Hallacy",
+      "Aditya Ramesh",
+      "Gabriel Goh",
+      "Sandhini Agarwal",
+      "Girish Sastry",
+      "Amanda Askell",
+      "Pamela Mishkin",
+      "Jack Clark",
+      "Gretchen Krueger",
+      "Ilya Sutskever"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2021-03-01",
+    "abstract": "State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. The resulting model, CLIP (Contrastive Language-Image Pre-training), transfers readily to over 30 existing computer vision datasets with competitive zero-shot performance.",
+    "url": "https://arxiv.org/abs/2103.00020",
+    "pdf_url": "https://arxiv.org/pdf/2103.00020.pdf"
+  },
+  {
+    "id": "2112.10752",
+    "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+    "authors": [
+      "Robin Rombach",
+      "Andreas Blattmann",
+      "Dominik Lorenz",
+      "Patrick Esser",
+      "Björn Ommer"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "published": "2021-12-20",
+    "abstract": "By decomposing the image formation process into a sequential application of denoising autoencoders, diffusion models (DMs) achieve state-of-the-art synthesis results on image data. Furthermore, their formulation allows for a guiding mechanism to control the image generation process without retraining. However, operating directly in pixel space demands immense computational resources. We propose Latent Diffusion Models (LDMs), which apply diffusion in the latent space of pre-trained autoencoders, drastically reducing computational requirements while retaining perceptual quality and synthesis fidelity.",
+    "url": "https://arxiv.org/abs/2112.10752",
+    "pdf_url": "https://arxiv.org/pdf/2112.10752.pdf"
+  },
+  {
+    "id": "2303.08774",
+    "title": "GPT-4 Technical Report",
+    "authors": [
+      "OpenAI"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "published": "2023-03-15",
+    "abstract": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. We also outline how safety training and red-teaming were incorporated into model alignment.",
+    "url": "https://arxiv.org/abs/2303.08774",
+    "pdf_url": "https://arxiv.org/pdf/2303.08774.pdf"
+  },
+  {
+    "id": "2307.09288",
+    "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+    "authors": [
+      "Hugo Touvron",
+      "Louis Martin",
+      "Kevin Stone",
+      "Peter Albert",
+      "Amjad Almahairi",
+      "Yasmine Babaei",
+      "Nikolay Bashlykov",
+      "Soumya Batra",
+      "Prajjwal Bhargava",
+      "Shruti Bhosale",
+      "Dan Bikel",
+      "Lukas Blecher",
+      "Cristian Canton Ferrer",
+      "Moya Chen",
+      "Guillem Cucurull",
+      "David Esiobu",
+      "Jude Fernandes",
+      "Jeremy Fu",
+      "Wenyin Fu",
+      "Brian Fuller",
+      "Cynthia Gao",
+      "Vedanuj Goswami",
+      "Naman Goyal",
+      "Anthony Hartshorn",
+      "Saghar Hosseini",
+      "Rui Hou",
+      "Hakan Inan",
+      "Marcin Kardas",
+      "Viktor Kerkez",
+      "Madian Khabsa",
+      "Isabel Kloumann",
+      "Artem Korenev",
+      "Punit Singh Koura",
+      "Marie-Anne Lachaux",
+      "Thibaut Lavril",
+      "Jenya Lee",
+      "Diana Liskovich",
+      "Yinghai Lu",
+      "Yuning Mao",
+      "Xavier Martinet",
+      "Todor Mihaylov",
+      "Pushkar Mishra",
+      "Igor Molybog",
+      "Yixin Nie",
+      "Andrew Poulton",
+      "Jeremy Reizenstein",
+      "Rashi Rungta",
+      "Kalyan Saladi",
+      "Alan Schelten",
+      "Ruan Silva",
+      "Eric Michael Smith",
+      "Ranjan Subramanian",
+      "Xiaoqing Ellen Tan",
+      "Binh Tang",
+      "Ross Taylor",
+      "Adina Williams",
+      "Jian Xiang Kuan",
+      "Puxin Xu",
+      "Zheng Yan",
+      "Iliyan Zarov",
+      "Yuchen Zhang",
+      "Angela Fan",
+      "Melanie Kambadur",
+      "Sharan Narang",
+      "Aurelien Rodriguez",
+      "Robert Stojnic",
+      "Sergey Edunov",
+      "Thomas Scialom"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2023-07-18",
+    "abstract": "In this work, we develop and release Llama 2, a collection of pretrained and fine-tuned large language models (LLMs) ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama 2-Chat, are optimized for dialogue use cases. Across the benchmarks we tested, Llama 2-Chat models outperform open-source chat models, and based on human evaluations for helpfulness and safety, are on par with some popular closed-source models like ChatGPT and PaLM.",
+    "url": "https://arxiv.org/abs/2307.09288",
+    "pdf_url": "https://arxiv.org/pdf/2307.09288.pdf"
+  },
+  {
+    "id": "1409.0473",
+    "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "authors": [
+      "Dzmitry Bahdanau",
+      "Kyunghyun Cho",
+      "Yoshua Bengio"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2014-09-01",
+    "abstract": "Neural machine translation is a recently proposed approach to machine translation. Unlike the traditional statistical machine translation, the neural machine translation aims at building a single neural network that can be jointly tuned to maximize the translation performance. The models proposed recently for neural machine translation often belong to a family of encoder-decoders and encode a source sentence into a fixed-length vector from which a decoder generates a translation. In this paper, we conjecture that the use of a fixed-length vector is a bottleneck in improving the performance of this basic encoder-decoder architecture, and propose to extend this by allowing a model to automatically (soft-)search for parts of a source sentence that are relevant to predicting a target word.",
+    "url": "https://arxiv.org/abs/1409.0473",
+    "pdf_url": "https://arxiv.org/pdf/1409.0473.pdf"
+  },
+  {
+    "id": "2201.11903",
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "authors": [
+      "Jason Wei",
+      "Xuezhi Wang",
+      "Dale Schuurmans",
+      "Maarten Bosma",
+      "Ed Chi",
+      "Quoc Le",
+      "Denny Zhou"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "published": "2022-01-28",
+    "abstract": "We explore how generating a chain of thought - a series of intermediate reasoning steps - significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain-of-thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on arithmetic, commonsense, and symbolic reasoning benchmarks show that chain-of-thought prompting outperforms standard prompting, achieving state-of-the-art accuracy on the GSM8K benchmark.",
+    "url": "https://arxiv.org/abs/2201.11903",
+    "pdf_url": "https://arxiv.org/pdf/2201.11903.pdf"
+  },
+  {
+    "id": "1904.12848v6",
+    "title": "Unsupervised Data Augmentation for Consistency Training",
+    "authors": [
+      "Qizhe Xie",
+      "Zihang Dai",
+      "Eduard Hovy",
+      "Minh-Thang Luong",
+      "Quoc V. Le"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "published": "2019-04-29",
+    "abstract": "Semi-supervised learning lately has shown much promise in improving deep learning models when labeled data is scarce. Common among recent approaches is the use of consistency training on a large amount of unlabeled data to constrain model predictions to be invariant to input noise. In this work, we present a new perspective on how to effectively noise unlabeled examples and argue that the quality of noising, specifically those produced by advanced data augmentation methods, plays a crucial role in semi-supervised learning. By substituting simple noising operations with advanced data augmentation methods such as RandAugment and back-translation, our method brings substantial improvements across six language and three vision tasks under the same consistency training framework. On the IMDb text classification dataset, with only 20 labeled examples, our method achieves an error rate of 4.20, outperforming the state-of-the-art model trained on 25,000 labeled examples. On a standard semi-supervised learning benchmark, CIFAR-10, our method outperforms all previous approaches and achieves an error rate of 5.43 with only 250 examples. Our method also combines well with transfer learning, e.g., when finetuning from BERT, and yields improvements in high-data regime, such as ImageNet, whether when there is only 10% labeled data or when a full labeled set with 1.3M extra unlabeled examples is used. Code is available at https://github.com/google-research/uda.",
+    "url": "https://arxiv.org/abs/1904.12848v6",
+    "pdf_url": "https://arxiv.org/pdf/1904.12848v6.pdf"
+  },
+  {
+    "id": "1806.00047v1",
+    "title": "Following High-level Navigation Instructions on a Simulated Quadcopter with Imitation Learning",
+    "authors": [
+      "Valts Blukis",
+      "Nataly Brukhim",
+      "Andrew Bennett",
+      "Ross A. Knepper",
+      "Yoav Artzi"
+    ],
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "published": "2018-05-31",
+    "abstract": "We introduce a method for following high-level navigation instructions by mapping directly from images, instructions and pose estimates to continuous low-level velocity commands for real-time control. The Grounded Semantic Mapping Network (GSMN) is a fully-differentiable neural network architecture that builds an explicit semantic map in the world reference frame by incorporating a pinhole camera projection model within the network. The information stored in the map is learned from experience, while the local-to-world transformation is computed explicitly. We train the model using DAggerFM, a modified variant of DAgger that trades tabular convergence guarantees for improved training speed and memory use. We test GSMN in virtual environments on a realistic quadcopter simulator and show that incorporating an explicit mapping and grounding modules allows GSMN to outperform strong neural baselines and almost reach an expert policy performance. Finally, we analyze the learned map representations and show that using an explicit map leads to an interpretable instruction-following model.",
+    "url": "https://arxiv.org/abs/1806.00047v1",
+    "pdf_url": "https://arxiv.org/pdf/1806.00047v1.pdf"
+  },
+  {
+    "id": "1903.03166v2",
+    "title": "CLEVR-Dialog: A Diagnostic Dataset for Multi-Round Reasoning in Visual Dialog",
+    "authors": [
+      "Satwik Kottur",
+      "José M. F. Moura",
+      "Devi Parikh",
+      "Dhruv Batra",
+      "Marcus Rohrbach"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2019-03-07",
+    "abstract": "Visual Dialog is a multimodal task of answering a sequence of questions grounded in an image, using the conversation history as context. It entails challenges in vision, language, reasoning, and grounding. However, studying these subtasks in isolation on large, real datasets is infeasible as it requires prohibitively-expensive complete annotation of the 'state' of all images and dialogs.   We develop CLEVR-Dialog, a large diagnostic dataset for studying multi-round reasoning in visual dialog. Specifically, we construct a dialog grammar that is grounded in the scene graphs of the images from the CLEVR dataset. This combination results in a dataset where all aspects of the visual dialog are fully annotated. In total, CLEVR-Dialog contains 5 instances of 10-round dialogs for about 85k CLEVR images, totaling to 4.25M question-answer pairs.   We use CLEVR-Dialog to benchmark performance of standard visual dialog models; in particular, on visual coreference resolution (as a function of the coreference distance). This is the first analysis of its kind for visual dialog models that was not possible without this dataset. We hope the findings from CLEVR-Dialog will help inform the development of future models for visual dialog. Our dataset and code are publicly available.",
+    "url": "https://arxiv.org/abs/1903.03166v2",
+    "pdf_url": "https://arxiv.org/pdf/1903.03166v2.pdf"
+  },
+  {
+    "id": "1902.09705v1",
+    "title": "Beyond the Self: Using Grounded Affordances to Interpret and Describe Others' Actions",
+    "authors": [
+      "Giovanni Saponaro",
+      "Lorenzo Jamone",
+      "Alexandre Bernardino",
+      "Giampiero Salvi"
+    ],
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "published": "2019-02-26",
+    "abstract": "We propose a developmental approach that allows a robot to interpret and describe the actions of human agents by reusing previous experience. The robot first learns the association between words and object affordances by manipulating the objects in its environment. It then uses this information to learn a mapping between its own actions and those performed by a human in a shared environment. It finally fuses the information from these two models to interpret and describe human actions in light of its own experience. In our experiments, we show that the model can be used flexibly to do inference on different aspects of the scene. We can predict the effects of an action on the basis of object properties. We can revise the belief that a certain action occurred, given the observed effects of the human action. In an early action recognition fashion, we can anticipate the effects when the action has only been partially observed. By estimating the probability of words given the evidence and feeding them into a pre-defined grammar, we can generate relevant descriptions of the scene. We believe that this is a step towards providing robots with the fundamental skills to engage in social collaboration with humans.",
+    "url": "https://arxiv.org/abs/1902.09705v1",
+    "pdf_url": "https://arxiv.org/pdf/1902.09705v1.pdf"
+  },
+  {
+    "id": "1805.09701v2",
+    "title": "R-VQA: Learning Visual Relation Facts with Semantic Attention for Visual Question Answering",
+    "authors": [
+      "Pan Lu",
+      "Lei Ji",
+      "Wei Zhang",
+      "Nan Duan",
+      "Ming Zhou",
+      "Jianyong Wang"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.MM"
+    ],
+    "published": "2018-05-24",
+    "abstract": "Recently, Visual Question Answering (VQA) has emerged as one of the most significant tasks in multimodal learning as it requires understanding both visual and textual modalities. Existing methods mainly rely on extracting image and question features to learn their joint feature embedding via multimodal fusion or attention mechanism. Some recent studies utilize external VQA-independent models to detect candidate entities or attributes in images, which serve as semantic knowledge complementary to the VQA task. However, these candidate entities or attributes might be unrelated to the VQA task and have limited semantic capacities. To better utilize semantic knowledge in images, we propose a novel framework to learn visual relation facts for VQA. Specifically, we build up a Relation-VQA (R-VQA) dataset based on the Visual Genome dataset via a semantic similarity module, in which each data consists of an image, a corresponding question, a correct answer and a supporting relation fact. A well-defined relation detector is then adopted to predict visual question-related relation facts. We further propose a multi-step attention model composed of visual attention and semantic attention sequentially to extract related visual knowledge and semantic knowledge. We conduct comprehensive experiments on the two benchmark datasets, demonstrating that our model achieves state-of-the-art performance and verifying the benefit of considering visual relation facts.",
+    "url": "https://arxiv.org/abs/1805.09701v2",
+    "pdf_url": "https://arxiv.org/pdf/1805.09701v2.pdf"
+  },
+  {
+    "id": "2011.07384v1",
+    "title": "Few-shot Object Grounding and Mapping for Natural Language Robot Instruction Following",
+    "authors": [
+      "Valts Blukis",
+      "Ross A. Knepper",
+      "Yoav Artzi"
+    ],
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "published": "2020-11-14",
+    "abstract": "We study the problem of learning a robot policy to follow natural language instructions that can be easily extended to reason about new objects. We introduce a few-shot language-conditioned object grounding method trained from augmented reality data that uses exemplars to identify objects and align them to their mentions in instructions. We present a learned map representation that encodes object locations and their instructed use, and construct it from our few-shot grounding output. We integrate this mapping approach into an instruction-following policy, thereby allowing it to reason about previously unseen objects at test-time by simply adding exemplars. We evaluate on the task of learning to map raw observations and instructions to continuous control of a physical quadcopter. Our approach significantly outperforms the prior state of the art in the presence of new objects, even when the prior approach observes all objects during training.",
+    "url": "https://arxiv.org/abs/2011.07384v1",
+    "pdf_url": "https://arxiv.org/pdf/2011.07384v1.pdf"
+  },
+  {
+    "id": "2401.09454v1",
+    "title": "Voila-A: Aligning Vision-Language Models with User's Gaze Attention",
+    "authors": [
+      "Kun Yan",
+      "Lei Ji",
+      "Zeyu Wang",
+      "Yuntao Wang",
+      "Nan Duan",
+      "Shuai Ma"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-12-22",
+    "abstract": "In recent years, the integration of vision and language understanding has led to significant advancements in artificial intelligence, particularly through Vision-Language Models (VLMs). However, existing VLMs face challenges in handling real-world applications with complex scenes and multiple objects, as well as aligning their focus with the diverse attention patterns of human users. In this paper, we introduce gaze information, feasibly collected by AR or VR devices, as a proxy for human attention to guide VLMs and propose a novel approach, Voila-A, for gaze alignment to enhance the interpretability and effectiveness of these models in real-world applications. First, we collect hundreds of minutes of gaze data to demonstrate that we can mimic human gaze modalities using localized narratives. We then design an automatic data annotation pipeline utilizing GPT-4 to generate the VOILA-COCO dataset. Additionally, we innovate the Voila Perceiver modules to integrate gaze information into VLMs while preserving their pretrained knowledge. We evaluate Voila-A using a hold-out validation set and a newly collected VOILA-GAZE Testset, which features real-life scenarios captured with a gaze-tracking device. Our experimental results demonstrate that Voila-A significantly outperforms several baseline models. By aligning model attention with human gaze patterns, Voila-A paves the way for more intuitive, user-centric VLMs and fosters engaging human-AI interaction across a wide range of applications.",
+    "url": "https://arxiv.org/abs/2401.09454v1",
+    "pdf_url": "https://arxiv.org/pdf/2401.09454v1.pdf"
+  },
+  {
+    "id": "2312.03818v2",
+    "title": "Alpha-CLIP: A CLIP Model Focusing on Wherever You Want",
+    "authors": [
+      "Zeyi Sun",
+      "Ye Fang",
+      "Tong Wu",
+      "Pan Zhang",
+      "Yuhang Zang",
+      "Shu Kong",
+      "Yuanjun Xiong",
+      "Dahua Lin",
+      "Jiaqi Wang"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-12-06",
+    "abstract": "Contrastive Language-Image Pre-training (CLIP) plays an essential role in extracting valuable content information from images across diverse tasks. It aligns textual and visual modalities to comprehend the entire image, including all the details, even those irrelevant to specific tasks. However, for a finer understanding and controlled editing of images, it becomes crucial to focus on specific regions of interest, which can be indicated as points, masks, or boxes by humans or perception models. To fulfill the requirements, we introduce Alpha-CLIP, an enhanced version of CLIP with an auxiliary alpha channel to suggest attentive regions and fine-tuned with constructed millions of RGBA region-text pairs. Alpha-CLIP not only preserves the visual recognition ability of CLIP but also enables precise control over the emphasis of image contents. It demonstrates effectiveness in various tasks, including but not limited to open-world recognition, multimodal large language models, and conditional 2D / 3D generation. It has a strong potential to serve as a versatile tool for image-related tasks.",
+    "url": "https://arxiv.org/abs/2312.03818v2",
+    "pdf_url": "https://arxiv.org/pdf/2312.03818v2.pdf"
+  },
+  {
+    "id": "2401.08577v1",
+    "title": "MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World",
+    "authors": [
+      "Yining Hong",
+      "Zishuo Zheng",
+      "Peihao Chen",
+      "Yian Wang",
+      "Junyan Li",
+      "Chuang Gan"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "published": "2024-01-16",
+    "abstract": "Human beings possess the capability to multiply a melange of multisensory cues while actively exploring and interacting with the 3D world. Current multi-modal large language models, however, passively absorb sensory data as inputs, lacking the capacity to actively interact with the objects in the 3D environment and dynamically collect their multisensory information. To usher in the study of this area, we propose MultiPLY, a multisensory embodied large language model that could incorporate multisensory interactive data, including visual, audio, tactile, and thermal information into large language models, thereby establishing the correlation among words, actions, and percepts. To this end, we first collect Multisensory Universe, a large-scale multisensory interaction dataset comprising 500k data by deploying an LLM-powered embodied agent to engage with the 3D environment. To perform instruction tuning with pre-trained LLM on such generated data, we first encode the 3D scene as abstracted object-centric representations and then introduce action tokens denoting that the embodied agent takes certain actions within the environment, as well as state tokens that represent the multisensory state observations of the agent at each time step. In the inference time, MultiPLY could generate action tokens, instructing the agent to take the action in the environment and obtain the next multisensory state observation. The observation is then appended back to the LLM via state tokens to generate subsequent text or action tokens. We demonstrate that MultiPLY outperforms baselines by a large margin through a diverse set of embodied tasks involving object retrieval, tool use, multisensory captioning, and task decomposition.",
+    "url": "https://arxiv.org/abs/2401.08577v1",
+    "pdf_url": "https://arxiv.org/pdf/2401.08577v1.pdf"
+  },
+  {
+    "id": "2311.11090v1",
+    "title": "Beyond Images: An Integrative Multi-modal Approach to Chest X-Ray Report Generation",
+    "authors": [
+      "Nurbanu Aksoy",
+      "Serge Sharoff",
+      "Selcuk Baser",
+      "Nishant Ravikumar",
+      "Alejandro F Frangi"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-11-18",
+    "abstract": "Image-to-text radiology report generation aims to automatically produce radiology reports that describe the findings in medical images. Most existing methods focus solely on the image data, disregarding the other patient information accessible to radiologists. In this paper, we present a novel multi-modal deep neural network framework for generating chest X-rays reports by integrating structured patient data, such as vital signs and symptoms, alongside unstructured clinical notes.We introduce a conditioned cross-multi-head attention module to fuse these heterogeneous data modalities, bridging the semantic gap between visual and textual data. Experiments demonstrate substantial improvements from using additional modalities compared to relying on images alone. Notably, our model achieves the highest reported performance on the ROUGE-L metric compared to relevant state-of-the-art models in the literature. Furthermore, we employed both human evaluation and clinical semantic similarity measurement alongside word-overlap metrics to improve the depth of quantitative analysis. A human evaluation, conducted by a board-certified radiologist, confirms the model's accuracy in identifying high-level findings, however, it also highlights that more improvement is needed to capture nuanced details and clinical context.",
+    "url": "https://arxiv.org/abs/2311.11090v1",
+    "pdf_url": "https://arxiv.org/pdf/2311.11090v1.pdf"
+  },
+  {
+    "id": "2311.17076v3",
+    "title": "Compositional Chain-of-Thought Prompting for Large Multimodal Models",
+    "authors": [
+      "Chancharik Mitra",
+      "Brandon Huang",
+      "Trevor Darrell",
+      "Roei Herzig"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-11-27",
+    "abstract": "The combination of strong visual backbones and Large Language Model (LLM) reasoning has led to Large Multimodal Models (LMMs) becoming the current standard for a wide range of vision and language (VL) tasks. However, recent research has shown that even the most advanced LMMs still struggle to capture aspects of compositional visual reasoning, such as attributes and relationships between objects. One solution is to utilize scene graphs (SGs)--a formalization of objects and their relations and attributes that has been extensively used as a bridge between the visual and textual domains. Yet, scene graph data requires scene graph annotations, which are expensive to collect and thus not easily scalable. Moreover, finetuning an LMM based on SG data can lead to catastrophic forgetting of the pretraining objective. To overcome this, inspired by chain-of-thought methods, we propose Compositional Chain-of-Thought (CCoT), a novel zero-shot Chain-of-Thought prompting method that utilizes SG representations in order to extract compositional knowledge from an LMM. Specifically, we first generate an SG using the LMM, and then use that SG in the prompt to produce a response. Through extensive experiments, we find that the proposed CCoT approach not only improves LMM performance on several vision and language VL compositional benchmarks but also improves the performance of several popular LMMs on general multimodal benchmarks, without the need for fine-tuning or annotated ground-truth SGs. Code: https://github.com/chancharikmitra/CCoT",
+    "url": "https://arxiv.org/abs/2311.17076v3",
+    "pdf_url": "https://arxiv.org/pdf/2311.17076v3.pdf"
+  },
+  {
+    "id": "2311.17593v1",
+    "title": "LanGWM: Language Grounded World Model",
+    "authors": [
+      "Rudra P. K. Poudel",
+      "Harit Pandya",
+      "Chao Zhang",
+      "Roberto Cipolla"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "published": "2023-11-29",
+    "abstract": "Recent advances in deep reinforcement learning have showcased its potential in tackling complex tasks. However, experiments on visual control tasks have revealed that state-of-the-art reinforcement learning models struggle with out-of-distribution generalization. Conversely, expressing higher-level concepts and global contexts is relatively easy using language.   Building upon recent success of the large language models, our main objective is to improve the state abstraction technique in reinforcement learning by leveraging language for robust action selection. Specifically, we focus on learning language-grounded visual features to enhance the world model learning, a model-based reinforcement learning technique.   To enforce our hypothesis explicitly, we mask out the bounding boxes of a few objects in the image observation and provide the text prompt as descriptions for these masked objects. Subsequently, we predict the masked objects along with the surrounding regions as pixel reconstruction, similar to the transformer-based masked autoencoder approach.   Our proposed LanGWM: Language Grounded World Model achieves state-of-the-art performance in out-of-distribution test at the 100K interaction steps benchmarks of iGibson point navigation tasks. Furthermore, our proposed technique of explicit language-grounded visual representation learning has the potential to improve models for human-robot interaction because our extracted visual features are language grounded.",
+    "url": "https://arxiv.org/abs/2311.17593v1",
+    "pdf_url": "https://arxiv.org/pdf/2311.17593v1.pdf"
+  },
+  {
+    "id": "2311.10111v1",
+    "title": "VideoCon: Robust Video-Language Alignment via Contrast Captions",
+    "authors": [
+      "Hritik Bansal",
+      "Yonatan Bitton",
+      "Idan Szpektor",
+      "Kai-Wei Chang",
+      "Aditya Grover"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-11-15",
+    "abstract": "Despite being (pre)trained on a massive amount of data, state-of-the-art video-language alignment models are not robust to semantically-plausible contrastive changes in the video captions. Our work addresses this by identifying a broad spectrum of contrast misalignments, such as replacing entities, actions, and flipping event order, which alignment models should be robust against. To this end, we introduce the VideoCon, a video-language alignment dataset constructed by a large language model that generates plausible contrast video captions and explanations for differences between original and contrast video captions. Then, a generative video-language model is finetuned with VideoCon to assess video-language entailment and generate explanations. Our VideoCon-based alignment model significantly outperforms current models. It exhibits a 12-point increase in AUC for the video-language alignment task on human-generated contrast captions. Finally, our model sets new state of the art zero-shot performance in temporally-extensive video-language tasks such as text-to-video retrieval (SSv2-Temporal) and video question answering (ATP-Hard). Moreover, our model shows superior performance on novel videos and human-crafted captions and explanations. Our code and data are available at https://github.com/Hritikbansal/videocon.",
+    "url": "https://arxiv.org/abs/2311.10111v1",
+    "pdf_url": "https://arxiv.org/pdf/2311.10111v1.pdf"
+  },
+  {
+    "id": "2403.10499v1",
+    "title": "Benchmarking Zero-Shot Robustness of Multimodal Foundation Models: A Pilot Study",
+    "authors": [
+      "Chenguang Wang",
+      "Ruoxi Jia",
+      "Xin Liu",
+      "Dawn Song"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "published": "2024-03-15",
+    "abstract": "Pre-training image representations from the raw text about images enables zero-shot vision transfer to downstream tasks. Through pre-training on millions of samples collected from the internet, multimodal foundation models, such as CLIP, produce state-of-the-art zero-shot results that often reach competitiveness with fully supervised methods without the need for task-specific training. Besides the encouraging performance on classification accuracy, it is reported that these models close the robustness gap by matching the performance of supervised models trained on ImageNet under natural distribution shift. Because robustness is critical to real-world applications, especially safety-critical ones, in this paper, we present a comprehensive evaluation based on a large-scale robustness benchmark covering 7 natural, 3 synthetic distribution shifts, and 11 adversarial attacks. We use CLIP as a pilot study. We show that CLIP leads to a significant robustness drop compared to supervised ImageNet models on our benchmark, especially under synthetic distribution shift and adversarial attacks. Furthermore, data overlap analysis suggests that the observed robustness under natural distribution shifts could be attributed, at least in part, to data overlap. In summary, our evaluation shows a comprehensive evaluation of robustness is necessary; and there is a significant need to improve the robustness of zero-shot multimodal models.",
+    "url": "https://arxiv.org/abs/2403.10499v1",
+    "pdf_url": "https://arxiv.org/pdf/2403.10499v1.pdf"
+  },
+  {
+    "id": "2312.03025v1",
+    "title": "Training on Synthetic Data Beats Real Data in Multimodal Relation Extraction",
+    "authors": [
+      "Zilin Du",
+      "Haoxin Li",
+      "Xu Guo",
+      "Boyang Li"
+    ],
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "published": "2023-12-05",
+    "abstract": "The task of multimodal relation extraction has attracted significant research attention, but progress is constrained by the scarcity of available training data. One natural thought is to extend existing datasets with cross-modal generative models. In this paper, we consider a novel problem setting, where only unimodal data, either text or image, are available during training. We aim to train a multimodal classifier from synthetic data that perform well on real multimodal test data. However, training with synthetic data suffers from two obstacles: lack of data diversity and label information loss. To alleviate the issues, we propose Mutual Information-aware Multimodal Iterated Relational dAta GEneration (MI2RAGE), which applies Chained Cross-modal Generation (CCG) to promote diversity in the generated data and exploits a teacher network to select valuable training samples with high mutual information with the ground-truth labels. Comparing our method to direct training on synthetic data, we observed a significant improvement of 24.06% F1 with synthetic text and 26.42% F1 with synthetic images. Notably, our best model trained on completely synthetic images outperforms prior state-of-the-art models trained on real multimodal data by a margin of 3.76% in F1. Our codebase will be made available upon acceptance.",
+    "url": "https://arxiv.org/abs/2312.03025v1",
+    "pdf_url": "https://arxiv.org/pdf/2312.03025v1.pdf"
+  },
+  {
+    "id": "2402.07023v1",
+    "title": "Gemini Goes to Med School: Exploring the Capabilities of Multimodal Large Language Models on Medical Challenge Problems & Hallucinations",
+    "authors": [
+      "Ankit Pal",
+      "Malaikannan Sankarasubbu"
+    ],
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "published": "2024-02-10",
+    "abstract": "Large language models have the potential to be valuable in the healthcare industry, but it's crucial to verify their safety and effectiveness through rigorous evaluation. For this purpose, we comprehensively evaluated both open-source LLMs and Google's new multimodal LLM called Gemini across Medical reasoning, hallucination detection, and Medical Visual Question Answering tasks. While Gemini showed competence, it lagged behind state-of-the-art models like MedPaLM 2 and GPT-4 in diagnostic accuracy. Additionally, Gemini achieved an accuracy of 61.45\\% on the medical VQA dataset, significantly lower than GPT-4V's score of 88\\%. Our analysis revealed that Gemini is highly susceptible to hallucinations, overconfidence, and knowledge gaps, which indicate risks if deployed uncritically. We also performed a detailed analysis by medical subject and test type, providing actionable feedback for developers and clinicians. To mitigate risks, we applied prompting strategies that improved performance. Additionally, we facilitated future research and development by releasing a Python module for medical LLM evaluation and establishing a dedicated leaderboard on Hugging Face for medical domain LLMs. Python module can be found at https://github.com/promptslab/RosettaEval",
+    "url": "https://arxiv.org/abs/2402.07023v1",
+    "pdf_url": "https://arxiv.org/pdf/2402.07023v1.pdf"
+  },
+  {
+    "id": "2403.01248v1",
+    "title": "SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code",
+    "authors": [
+      "Ziniu Hu",
+      "Ahmet Iscen",
+      "Aashi Jain",
+      "Thomas Kipf",
+      "Yisong Yue",
+      "David A. Ross",
+      "Cordelia Schmid",
+      "Alireza Fathi"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2024-03-02",
+    "abstract": "This paper introduces SceneCraft, a Large Language Model (LLM) Agent converting text descriptions into Blender-executable Python scripts which render complex scenes with up to a hundred 3D assets. This process requires complex spatial planning and arrangement. We tackle these challenges through a combination of advanced abstraction, strategic planning, and library learning. SceneCraft first models a scene graph as a blueprint, detailing the spatial relationships among assets in the scene. SceneCraft then writes Python scripts based on this graph, translating relationships into numerical constraints for asset layout. Next, SceneCraft leverages the perceptual strengths of vision-language foundation models like GPT-V to analyze rendered images and iteratively refine the scene. On top of this process, SceneCraft features a library learning mechanism that compiles common script functions into a reusable library, facilitating continuous self-improvement without expensive LLM parameter tuning. Our evaluation demonstrates that SceneCraft surpasses existing LLM-based agents in rendering complex scenes, as shown by its adherence to constraints and favorable human assessments. We also showcase the broader application potential of SceneCraft by reconstructing detailed 3D scenes from the Sintel movie and guiding a video generative model with generated scenes as intermediary control signal.",
+    "url": "https://arxiv.org/abs/2403.01248v1",
+    "pdf_url": "https://arxiv.org/pdf/2403.01248v1.pdf"
+  },
+  {
+    "id": "2404.09516v1",
+    "title": "State Space Model for New-Generation Network Alternative to Transformers: A Survey",
+    "authors": [
+      "Xiao Wang",
+      "Shiao Wang",
+      "Yuhe Ding",
+      "Yuehang Li",
+      "Wentao Wu",
+      "Yao Rong",
+      "Weizhe Kong",
+      "Ju Huang",
+      "Shihao Li",
+      "Haoxiang Yang",
+      "Ziwen Wang",
+      "Bo Jiang",
+      "Chenglong Li",
+      "Yaowei Wang",
+      "Yonghong Tian",
+      "Jin Tang"
+    ],
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.MM"
+    ],
+    "published": "2024-04-15",
+    "abstract": "In the post-deep learning era, the Transformer architecture has demonstrated its powerful performance across pre-trained big models and various downstream tasks. However, the enormous computational demands of this architecture have deterred many researchers. To further reduce the complexity of attention models, numerous efforts have been made to design more efficient methods. Among them, the State Space Model (SSM), as a possible replacement for the self-attention based Transformer model, has drawn more and more attention in recent years. In this paper, we give the first comprehensive review of these works and also provide experimental comparisons and analysis to better demonstrate the features and advantages of SSM. Specifically, we first give a detailed description of principles to help the readers quickly capture the key ideas of SSM. After that, we dive into the reviews of existing SSMs and their various applications, including natural language processing, computer vision, graph, multi-modal and multi-media, point cloud/event stream, time series data, and other domains. In addition, we give statistical comparisons and analysis of these models and hope it helps the readers to understand the effectiveness of different structures on various tasks. Then, we propose possible research points in this direction to better promote the development of the theoretical model and application of SSM. More related works will be continuously updated on the following GitHub: https://github.com/Event-AHU/Mamba_State_Space_Model_Paper_List.",
+    "url": "https://arxiv.org/abs/2404.09516v1",
+    "pdf_url": "https://arxiv.org/pdf/2404.09516v1.pdf"
+  },
+  {
+    "id": "2404.16030v1",
+    "title": "MoDE: CLIP Data Experts via Clustering",
+    "authors": [
+      "Jiawei Ma",
+      "Po-Yao Huang",
+      "Saining Xie",
+      "Shang-Wen Li",
+      "Luke Zettlemoyer",
+      "Shih-Fu Chang",
+      "Wen-Tau Yih",
+      "Hu Xu"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2024-04-24",
+    "abstract": "The success of contrastive language-image pretraining (CLIP) relies on the supervision from the pairing between images and captions, which tends to be noisy in web-crawled data. We present Mixture of Data Experts (MoDE) and learn a system of CLIP data experts via clustering. Each data expert is trained on one data cluster, being less sensitive to false negative noises in other clusters. At inference time, we ensemble their outputs by applying weights determined through the correlation between task metadata and cluster conditions. To estimate the correlation precisely, the samples in one cluster should be semantically similar, but the number of data experts should still be reasonable for training and inference. As such, we consider the ontology in human language and propose to use fine-grained cluster centers to represent each data expert at a coarse-grained level. Experimental studies show that four CLIP data experts on ViT-B/16 outperform the ViT-L/14 by OpenAI CLIP and OpenCLIP on zero-shot image classification but with less ($<$35\\%) training cost. Meanwhile, MoDE can train all data expert asynchronously and can flexibly include new data experts. The code is available at https://github.com/facebookresearch/MetaCLIP/tree/main/mode.",
+    "url": "https://arxiv.org/abs/2404.16030v1",
+    "pdf_url": "https://arxiv.org/pdf/2404.16030v1.pdf"
+  },
+  {
+    "id": "2303.00855v2",
+    "title": "Grounded Decoding: Guiding Text Generation with Grounded Models for Embodied Agents",
+    "authors": [
+      "Wenlong Huang",
+      "Fei Xia",
+      "Dhruv Shah",
+      "Danny Driess",
+      "Andy Zeng",
+      "Yao Lu",
+      "Pete Florence",
+      "Igor Mordatch",
+      "Sergey Levine",
+      "Karol Hausman",
+      "Brian Ichter"
+    ],
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "published": "2023-03-01",
+    "abstract": "Recent progress in large language models (LLMs) has demonstrated the ability to learn and leverage Internet-scale knowledge through pre-training with autoregressive models. Unfortunately, applying such models to settings with embodied agents, such as robots, is challenging due to their lack of experience with the physical world, inability to parse non-language observations, and ignorance of rewards or safety constraints that robots may require. On the other hand, language-conditioned robotic policies that learn from interaction data can provide the necessary grounding that allows the agent to be correctly situated in the real world, but such policies are limited by the lack of high-level semantic understanding due to the limited breadth of the interaction data available for training them. Thus, if we want to make use of the semantic knowledge in a language model while still situating it in an embodied setting, we must construct an action sequence that is both likely according to the language model and also realizable according to grounded models of the environment. We frame this as a problem similar to probabilistic filtering: decode a sequence that both has high probability under the language model and high probability under a set of grounded model objectives. We demonstrate how such grounded models can be obtained across three simulation and real-world domains, and that the proposed decoding strategy is able to solve complex, long-horizon embodiment tasks in a robotic setting by leveraging the knowledge of both models. The project's website can be found at grounded-decoding.github.io.",
+    "url": "https://arxiv.org/abs/2303.00855v2",
+    "pdf_url": "https://arxiv.org/pdf/2303.00855v2.pdf"
+  }
+]
