@@ -61,3 +61,45 @@ class MedicalRetriever:
         """Retrieves top_k most relevant MedQuAD QA items."""
         query_vec = self.embeddings.encode(query)
         return self.vector_store.search(query_vec, top_k=top_k)
+
+    def answer_medical_query(self, query: str, llm_client: Any = None, top_k: int = 3) -> Dict[str, Any]:
+        """Performs entity extraction, MedQuAD semantic retrieval, and grounds the medical answer."""
+        from .entity_extraction import MedicalEntityExtractor
+        entities = MedicalEntityExtractor.extract_entities(query)
+        records = self.retrieve(query, top_k=top_k)
+
+        if not records:
+            return {
+                "text": "No directly corresponding clinical records were found in the indexed NIH MedQuAD dataset for this query.",
+                "entities": entities,
+                "retrieved_records": []
+            }
+
+        top_rec = records[0]
+        context_blocks = "\n\n".join([
+            f"[NIH MedQuAD Record - {r.get('focus')} ({r.get('qtype')})]:\nQuestion: {r.get('question')}\nVerified Answer: {r.get('answer')}"
+            for r in records
+        ])
+
+        if llm_client:
+            prompt = f"Patient/User Query: {query}\n\nRetrieved NIH MedQuAD Clinical Records:\n{context_blocks}"
+            system_instruction = (
+                "You are an educational medical knowledge assistant. Formulate a structured, accurate clinical "
+                "response based strictly on the retrieved NIH MedQuAD evidence. Always remind the user that this "
+                "is educational information and not a clinical diagnosis."
+            )
+            llm_res = llm_client.generate_response(
+                prompt=prompt,
+                system_instruction=system_instruction,
+                retrieved_context=context_blocks
+            )
+            final_text = llm_res["text"]
+        else:
+            final_text = f"**Clinical Focus: {top_rec.get('focus')}** ({top_rec.get('qtype')})\n\n{top_rec.get('answer')}"
+
+        return {
+            "text": final_text,
+            "entities": entities,
+            "retrieved_records": records,
+            "sources": records
+        }

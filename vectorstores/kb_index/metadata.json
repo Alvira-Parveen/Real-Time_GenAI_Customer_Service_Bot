@@ -1,10 +1,11 @@
 {
   "stats": {
-    "total_documents": 5,
-    "total_chunks": 22,
-    "last_updated": "2026-09-07 22:46:32",
+    "total_documents": 6,
+    "total_chunks": 23,
+    "last_updated": "2026-09-08 22:30:50",
     "indexed_sources": [
       "faq.txt",
+      "holiday_extended_warranty_2026.txt",
       "product_information.txt",
       "refund_policy.txt",
       "shipping_policy.txt",
@@ -56,6 +57,15 @@
       "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
       "file_hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
       "char_len": 471
+    },
+    {
+      "chunk_id": "holiday_extended_warranty_2026.txt_chunk_0",
+      "text": "ApexTech Holiday Extended Warranty 2026 Policy Addendum:\nAll consumer electronics purchased between November 1 and December 31, 2026 receive an exclusive 90-day no-questions-asked money-back guarantee and free accidental screen damage protection. Return shipping is completely free for all holiday gift orders.",
+      "chunk_index": 0,
+      "source": "holiday_extended_warranty_2026.txt",
+      "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/holiday_extended_warranty_2026.txt",
+      "file_hash": "77848a3fcb5697abeeecf386bb8282cf6ce498ccea335e53ba3d14695e6f82d1",
+      "char_len": 310
     },
     {
       "chunk_id": "product_information.txt_chunk_0",

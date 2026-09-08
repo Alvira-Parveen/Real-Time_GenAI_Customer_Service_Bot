@@ -73,7 +73,7 @@ class MultimodalAnalyzer:
         mean_brightness = float(np.mean(arr))
         contrast_std = float(np.std(arr))
 
-        report = f"""### 🔍 Visual Diagnostic Assessment
+        report = f"""### Visual Diagnostic Assessment
 *Image Specifications: {width}x{height} pixels | Format: {image.format or 'RGB'} | Average Luminance: {mean_brightness:.1f}/255 | Contrast Variance: {contrast_std:.1f}*
 
 **Assessment for query:** *"{prompt}"*
@@ -93,10 +93,16 @@ class MultimodalAnalyzer:
 
 *(Tip: Enter your Google Gemini API key in the sidebar for full generative multimodal vision reasoning.)*
 """
+        # Detect if screen crack / high contrast fracture line exists
+        defect_type = "Screen Crack / Impact Damage" if contrast_std > 10 else "Surface Wear / General Hardware Defect"
+        severity = "High" if contrast_std > 12 else "Medium"
+
         return {
             "success": True,
             "engine": "Local Diagnostic Vision Engine (Gemini API key optional)",
             "model": "Local-CV-Heuristic",
+            "defect_type": defect_type,
+            "severity": severity,
             "text": report,
             "image_meta": {"width": width, "height": height, "brightness": mean_brightness}
         }

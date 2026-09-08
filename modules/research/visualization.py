@@ -103,6 +103,41 @@ class ResearchVisualizer:
         return fig
 
     @classmethod
+    def create_category_distribution(cls, papers: List[Dict[str, Any]] = None) -> go.Figure:
+        """Generates a bar distribution of primary arXiv research categories."""
+        if papers is None:
+            from modules.research.paper_search import ArxivPaperSearch
+            papers = ArxivPaperSearch().get_all_papers()
+        cat_counts = {}
+        for p in papers:
+            for c in p.get("categories", []):
+                cat_counts[c] = cat_counts.get(c, 0) + 1
+        
+        cats = sorted(cat_counts.keys(), key=lambda k: cat_counts[k], reverse=True)
+        counts = [cat_counts[c] for c in cats]
+        
+        fig = go.Figure(
+            data=[go.Bar(
+                x=cats,
+                y=counts,
+                marker=dict(color="#0a0a0a", line=dict(width=1, color="#262626")),
+                text=counts,
+                textposition="auto"
+            )],
+            layout=go.Layout(
+                title="<b>arXiv Research Distribution by Primary Category</b>",
+                title_x=0.5,
+                xaxis=dict(title="Category Code"),
+                yaxis=dict(title="Indexed Publications"),
+                plot_bgcolor='rgba(240,242,246,0.5)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                margin=dict(b=20, l=10, r=10, t=50),
+                height=450
+            )
+        )
+        return fig
+
+    @classmethod
     def create_concept_graph(cls) -> go.Figure:
         """Visualizes conceptual relationships in modern Deep Learning architectures."""
         concepts = {

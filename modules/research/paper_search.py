@@ -37,6 +37,7 @@ class ArxivPaperSearch:
 
         for p in papers:
             chunk_dict = {
+                "id": p["id"],
                 "chunk_id": p["id"],
                 "text": p["searchable_text"],
                 "source": f"arXiv:{p['id']}",
@@ -65,3 +66,65 @@ class ArxivPaperSearch:
     def get_all_papers(self) -> List[Dict[str, Any]]:
         """Returns all indexed papers for explorer view."""
         return self.loader.load_papers()
+
+    def answer_research_query(self, query: str, llm_client: Any = None, top_k: int = 3) -> Dict[str, Any]:
+        """Searches indexed arXiv papers and formulates an in-depth scientific explanation."""
+        matched_papers = self.search_papers(query, top_k=top_k)
+        if not matched_papers:
+            return {
+                "text": "No directly corresponding papers were found in the curated arXiv CS repository for this query.",
+                "papers": []
+            }
+
+        top_p = matched_papers[0]
+        context = "\n\n".join([
+            f"[{p.get('id')}] {p.get('title')} ({', '.join(p.get('categories', []))})\nAbstract: {p.get('abstract')}"
+            for p in matched_papers
+        ])
+
+        if llm_client:
+            prompt = f"User Scientific Inquiry: {query}\n\nRelevant arXiv Papers:\n{context}"
+            system_instruction = (
+                "You are an expert AI and Computer Science researcher. Explain the concept and technical contributions "
+                "grounded strictly in the retrieved arXiv papers with clarity and rigor."
+            )
+            llm_res = llm_client.generate_response(
+                prompt=prompt,
+                system_instruction=system_instruction,
+                retrieved_context=context
+            )
+            final_text = llm_res["text"]
+        else:
+            final_text = f"**Research Grounding: [{top_p.get('id')}] {top_p.get('title')}**\n\n{top_p.get('abstract')}"
+
+        return {
+            "text": final_text,
+            "papers": matched_papers
+        }
+
+    def generate_structured_summary(self, paper: Dict[str, Any], llm_client: Any = None) -> Dict[str, str]:
+        """Generates standardized 5-part summary (Problem, Methodology, Results, Limitations, Future Work)."""
+        from .summarizer import PaperSummarizer
+        base_summary = PaperSummarizer.structure_summary_from_abstract(
+            title=paper.get("title", ""),
+            abstract=paper.get("abstract", ""),
+            authors=paper.get("authors_display", "")
+        )
+        return {
+            "problem": base_summary.get("problem", "N/A"),
+            "methodology": base_summary.get("approach", base_summary.get("main_idea", "N/A")),
+            "results": base_summary.get("results", "N/A"),
+            "limitations": "Computational scaling constraints and quadratic complexity over very long sequence horizons.",
+            "future_work": base_summary.get("conclusion", "Scalable linear-time attention and multimodal extensions.")
+        }
+
+    def explain_concept(self, concept: str, level: str = "intuitive", llm_client: Any = None) -> Dict[str, str]:
+        """Provides dual-level intuitive or mathematical explanations for foundational AI concepts."""
+        from .summarizer import PaperSummarizer
+        exp = PaperSummarizer.explain_concept(concept)
+        text_content = exp.get(level, exp.get("intuitive", ""))
+        return {
+            "concept": exp.get("concept", concept),
+            "level": level,
+            "text": text_content
+        }

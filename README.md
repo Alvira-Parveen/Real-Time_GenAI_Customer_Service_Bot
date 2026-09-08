@@ -19,6 +19,26 @@ This application integrates the base training project (a real-time customer serv
 
 ---
 
+## 📸 Application Interface & Task Verification Gallery
+
+| Step 0: Compliance Matrix | Unified Customer Support Console |
+| :---: | :---: |
+| ![Compliance Matrix](screenshots/task0_compliance_matrix.png) | ![Customer Support Console](screenshots/unified_customer_support_console.png) |
+
+| Task 1: Dynamic Knowledge Base | Task 2: Multimodal Diagnostics |
+| :---: | :---: |
+| ![Task 1 Dynamic KB](screenshots/task1_dynamic_knowledge_base.png) | ![Task 2 Multimodal](screenshots/task2_multimodal_diagnostics.png) |
+
+| Task 3: Clinical Reference (MedQuAD) | Task 4: Research Explorer (arXiv) |
+| :---: | :---: |
+| ![Task 3 MedQuAD](screenshots/task3_clinical_reference_medquad.png) | ![Task 4 arXiv](screenshots/task4_research_explorer_arxiv.png) |
+
+| Task 5: Sentiment Benchmark | Task 6: Multilingual Processing |
+| :---: | :---: |
+| ![Task 5 Sentiment](screenshots/task5_sentiment_analytics_benchmark.png) | ![Task 6 Multilingual](screenshots/task6_multilingual_processing.png) |
+
+---
+
 ## 📊 Dataset Audit Table
 
 | Task | Dataset / Source | Local Path | Records / Files | Purpose |

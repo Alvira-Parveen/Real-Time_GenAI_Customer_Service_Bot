@@ -5,6 +5,12 @@
     "mtime": 1788801094.3981752,
     "char_count": 1582
   },
+  "holiday_extended_warranty_2026.txt": {
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/holiday_extended_warranty_2026.txt",
+    "hash": "77848a3fcb5697abeeecf386bb8282cf6ce498ccea335e53ba3d14695e6f82d1",
+    "mtime": 1788885741.192504,
+    "char_count": 310
+  },
   "product_information.txt": {
     "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
     "hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
