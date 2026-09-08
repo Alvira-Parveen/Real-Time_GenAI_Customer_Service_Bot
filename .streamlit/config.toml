@@ -1,6 +1,7 @@
 [server]
-headless = false
-fileWatcherType = "poll"
+headless = true
+enableCORS = false
+enableXsrfProtection = false
 
 [theme]
 primaryColor = "#0a0a0a"
