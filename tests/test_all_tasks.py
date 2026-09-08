@@ -28,7 +28,11 @@ class TestInternshipBotTasks(unittest.TestCase):
         # Test query
         results = kb.query("What is the return window?", top_k=2)
         self.assertGreater(len(results), 0)
-        print(f"Task 1 Success: {stats['total_chunks']} chunks indexed across {stats['total_documents']} files.")
+
+        # Test periodic automatic update check
+        periodic_res = kb.check_periodic_update(interval_seconds=0)
+        self.assertIn(periodic_res["status"], ["up_to_date", "updated"])
+        print(f"Task 1 Success: {stats['total_chunks']} chunks indexed across {stats['total_documents']} files; periodic update verified.")
 
     def test_task2_multimodal(self):
         print("\n--- Testing Task 2: Multimodal Chatbot ---")

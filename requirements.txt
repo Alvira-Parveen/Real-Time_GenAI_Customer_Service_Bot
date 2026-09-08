@@ -1,0 +1,30 @@
+# Core Web & UI
+streamlit>=1.35.0
+
+# LLM & Cloud APIs (Google Gemini & Imagen)
+google-genai>=0.1.0
+google-generativeai>=0.8.0
+
+# Embeddings & Vector Search
+sentence-transformers>=3.0.0
+torch>=2.2.0
+faiss-cpu>=1.8.0
+
+# NLP, Sentiment Analysis & Multilingual
+nltk>=3.8.0
+langdetect>=1.0.9
+scikit-learn>=1.4.0
+
+# Data Manipulation & PDF Processing
+pandas>=2.2.0
+numpy>=1.26.0
+pypdf>=4.0.0
+pillow>=10.0.0
+
+# Visualization & Network Graphs
+networkx>=3.2.0
+plotly>=5.20.0
+
+# Utilities
+requests>=2.31.0
+python-dotenv>=1.0.0
