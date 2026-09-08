@@ -4,6 +4,8 @@ A unified, multi-domain Retrieval-Augmented Generation (RAG) platform developed 
 
 This application integrates the base training project (a real-time customer service chatbot) with all six required internship extensions into **one cohesive Streamlit application**.
 
+🌐 **Deployed Link :** https://real-timegenaicustomerservicebot.streamlit.app/ 
+
 ---
 
 ## 📌 Problem Statement
