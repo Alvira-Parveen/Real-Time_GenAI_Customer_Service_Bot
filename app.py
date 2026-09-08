@@ -33,379 +33,440 @@ st.set_page_config(
 # Custom CSS for Luxury Modern AI Aesthetics & Micro-animations
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-    html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* ==========================================================================
+       CLAY.COM DESIGN SYSTEM TOKENS
+       Canvas: #fffaf0 | Surface Soft: #faf5e8 | Surface Card: #f5f0e0
+       Primary Ink: #0a0a0a | Body: #3a3a3a | Muted: #6a6a6a
+       ========================================================================== */
+
+    html, body, [class*="css"], .stApp {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        background-color: #fffaf0 !important;
+        color: #0a0a0a !important;
     }
     
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif !important;
-        letter-spacing: -0.02em;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        color: #0a0a0a !important;
+        letter-spacing: -0.03em !important;
+    }
+
+    p, span, label, div {
+        color: #3a3a3a;
+    }
+
+    small, .stCaption {
+        color: #6a6a6a !important;
     }
 
     code, pre {
-        font-family: 'JetBrains Mono', monospace !important;
+        font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace !important;
+        background-color: #f5f0e0 !important;
+        color: #0a0a0a !important;
+        border: 1px solid #ebe6d6 !important;
+        border-radius: 6px !important;
+        padding: 2px 6px !important;
     }
 
-    /* Ambient Subtle Mesh Background */
-    .stApp {
-        background: radial-gradient(circle at 12% 12%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-                    radial-gradient(circle at 88% 88%, rgba(139, 92, 246, 0.04) 0%, transparent 45%),
-                    #f8fafc;
-    }
-    
-    /* Modern Glassmorphism Hero Banner */
-    .hero-container {
-        background: linear-gradient(135deg, #090d16 0%, #111827 50%, #1e1b4b 100%);
-        border: 1px solid rgba(99, 102, 241, 0.28);
-        border-radius: 20px;
-        padding: 30px 38px;
-        margin-bottom: 26px;
-        box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.35), 0 0 35px rgba(99, 102, 241, 0.14);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hero-container::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
-        pointer-events: none;
+    /* Main Container Padding */
+    .block-container {
+        padding-top: 2rem !important;
+        padding-bottom: 4rem !important;
+        max-width: 1280px !important;
     }
 
-    .hero-top-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-        position: relative;
-        z-index: 2;
+    /* ==========================================================================
+       SIDEBAR — Warm Cream Surface Soft (#faf5e8)
+       ========================================================================== */
+    section[data-testid="stSidebar"] {
+        background-color: #faf5e8 !important;
+        border-right: 1px solid #e5e5e5 !important;
     }
 
-    .hero-pill-tag {
-        background: rgba(99, 102, 241, 0.18);
-        color: #a5b4fc;
-        border: 1px solid rgba(165, 180, 252, 0.35);
-        border-radius: 9999px;
-        padding: 5px 14px;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
+    section[data-testid="stSidebar"] * {
+        color: #1a1a1a !important;
     }
 
-    .hero-live-badge {
-        background: rgba(16, 185, 129, 0.15);
-        color: #34d399;
-        border: 1px solid rgba(52, 211, 153, 0.35);
-        border-radius: 9999px;
-        padding: 5px 14px;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .pulsing-dot {
-        width: 8px;
-        height: 8px;
-        background-color: #10b981;
-        border-radius: 50%;
-        display: inline-block;
-        box-shadow: 0 0 10px #10b981;
-        animation: pulse-dot 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
-    }
-
-    @keyframes pulse-dot {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.35; transform: scale(1.35); }
-    }
-
-    .hero-title {
-        font-family: 'Outfit', sans-serif !important;
-        font-size: 30px !important;
-        font-weight: 800 !important;
-        color: #ffffff !important;
-        margin: 0 !important;
-        line-height: 1.25 !important;
-        background: linear-gradient(90deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-subtitle {
-        font-size: 14.5px;
-        color: #94a3b8;
-        margin-top: 8px;
-        line-height: 1.55;
-        max-width: 950px;
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Primary Gradient Buttons */
-    .stButton > button {
-        background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
-        color: #ffffff !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 11px !important;
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {
+        color: #0a0a0a !important;
         font-weight: 600 !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    section[data-testid="stSidebar"] div[data-testid="stRadio"] > div {
+        background: transparent !important;
+        border: none !important;
+        gap: 6px !important;
+        padding: 0 !important;
+    }
+
+    section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
+        background: #ffffff !important;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 12px !important;
+        padding: 10px 14px !important;
+        color: #1a1a1a !important;
+        font-weight: 500 !important;
         font-size: 13.5px !important;
-        padding: 0.55rem 1.2rem !important;
-        letter-spacing: 0.2px !important;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25) !important;
+        transition: all 0.15s ease !important;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.02) !important;
+        margin-bottom: 4px !important;
+    }
+
+    section[data-testid="stSidebar"] div[data-testid="stRadio"] label:hover {
+        background: #f5f0e0 !important;
+        border-color: #dcd6c4 !important;
+    }
+
+    /* ==========================================================================
+       BUTTONS — Clay Primary (#0a0a0a) & Secondary
+       ========================================================================== */
+    .stButton > button {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #0a0a0a !important;
+        border-radius: 12px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+        min-height: 42px !important;
+        letter-spacing: -0.1px !important;
+        transition: all 0.15s ease !important;
+        box-shadow: none !important;
     }
 
     .stButton > button:hover {
-        transform: translateY(-2px) scale(1.01) !important;
-        box-shadow: 0 8px 24px rgba(79, 70, 229, 0.42) !important;
-        border-color: rgba(255, 255, 255, 0.35) !important;
+        background: #262626 !important;
+        border-color: #262626 !important;
         color: #ffffff !important;
+        transform: translateY(-1px) !important;
     }
 
     .stButton > button:active {
         transform: translateY(0) !important;
     }
 
-    /* Metric Cards Redesign */
+    .stDownloadButton > button {
+        background: #ffffff !important;
+        color: #0a0a0a !important;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 12px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+        min-height: 42px !important;
+        transition: all 0.15s ease !important;
+    }
+
+    .stDownloadButton > button:hover {
+        background: #f5f0e0 !important;
+        border-color: #dcd6c4 !important;
+        color: #0a0a0a !important;
+    }
+
+    /* ==========================================================================
+       METRICS — Crisp Clean Cards (#ffffff)
+       ========================================================================== */
     div[data-testid="stMetric"] {
         background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
-        border-top: 3px solid #6366f1 !important;
-        border-radius: 14px !important;
-        padding: 16px 20px !important;
-        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04) !important;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 16px !important;
+        padding: 18px 22px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+        transition: transform 0.15s ease !important;
     }
 
     div[data-testid="stMetric"]:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 12px 28px -4px rgba(99, 102, 241, 0.18) !important;
-        border-top-color: #8b5cf6 !important;
+        transform: translateY(-2px) !important;
+        border-color: #d4cfc2 !important;
     }
 
     div[data-testid="stMetricValue"] > div {
-        font-family: 'Outfit', sans-serif !important;
-        font-weight: 800 !important;
-        color: #0f172a !important;
-        font-size: 27px !important;
-        letter-spacing: -0.5px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        color: #0a0a0a !important;
+        font-size: 28px !important;
+        letter-spacing: -1px !important;
     }
 
     div[data-testid="stMetricLabel"] p {
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-weight: 700 !important;
-        font-size: 0.76rem !important;
-        color: #64748b !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.6px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 13px !important;
+        color: #6a6a6a !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
     }
 
-    /* Sidebar Executive Dark Styling */
-    section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #070a12 0%, #0f172a 100%) !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
-    }
-
-    section[data-testid="stSidebar"] .stMarkdown,
-    section[data-testid="stSidebar"] label,
-    section[data-testid="stSidebar"] p,
-    section[data-testid="stSidebar"] span {
-        color: #cbd5e1 !important;
-    }
-
-    section[data-testid="stSidebar"] h2,
-    section[data-testid="stSidebar"] h3 {
-        color: #f8fafc !important;
-        font-family: 'Outfit', sans-serif !important;
-        font-weight: 700 !important;
-    }
-
-    div[data-testid="stRadio"] > div {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 8px 10px;
-    }
-
-    div[data-testid="stRadio"] label {
-        border-radius: 9px;
-        padding: 6px 12px;
-        transition: all 0.2s ease;
-    }
-
-    div[data-testid="stRadio"] label:hover {
-        background: rgba(99, 102, 241, 0.16) !important;
-    }
-
-    /* Chat Messages */
+    /* ==========================================================================
+       CHAT MESSAGES & INPUTS
+       ========================================================================== */
     div[data-testid="stChatMessage"] {
         background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
+        border: 1px solid #e5e5e5 !important;
         border-radius: 16px !important;
-        padding: 16px 22px !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
-        margin-bottom: 14px !important;
-        transition: border-color 0.2s ease;
+        padding: 18px 24px !important;
+        color: #0a0a0a !important;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.02) !important;
+        margin-bottom: 12px !important;
     }
 
-    div[data-testid="stChatMessage"]:hover {
-        border-color: #cbd5e1 !important;
+    div[data-testid="stChatMessage"] * {
+        color: #1a1a1a !important;
     }
 
-    /* Badges */
+    div[data-baseweb="input"], div[data-baseweb="textarea"] {
+        background-color: #ffffff !important;
+        border-radius: 12px !important;
+        border: 1px solid #e5e5e5 !important;
+    }
+
+    div[data-baseweb="input"] input, div[data-baseweb="textarea"] textarea {
+        color: #0a0a0a !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    div[data-baseweb="input"]:focus-within, div[data-baseweb="textarea"]:focus-within {
+        border-color: #0a0a0a !important;
+        box-shadow: none !important;
+    }
+
+    div[data-baseweb="select"] > div {
+        background-color: #ffffff !important;
+        border-radius: 12px !important;
+        border: 1px solid #e5e5e5 !important;
+        color: #0a0a0a !important;
+    }
+
+    /* ==========================================================================
+       TABS
+       ========================================================================== */
+    button[data-baseweb="tab"] {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+        color: #6a6a6a !important;
+        padding: 10px 18px !important;
+        border-radius: 10px 10px 0 0 !important;
+        transition: all 0.15s ease !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] {
+        background: #f5f0e0 !important;
+        color: #0a0a0a !important;
+        font-weight: 600 !important;
+        border-bottom: 2px solid #0a0a0a !important;
+    }
+
+    /* ==========================================================================
+       CALLOUTS & BADGES
+       ========================================================================== */
+    .info-box {
+        background: #f5f0e0;
+        border: 1px solid #ebe6d6;
+        border-left: 4px solid #0a0a0a;
+        padding: 16px 20px;
+        border-radius: 14px;
+        color: #1a1a1a;
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .info-box * {
+        color: #1a1a1a !important;
+    }
+
+    .disclaimer-box {
+        background: #fff4ec;
+        border: 1px solid #fed7aa;
+        border-left: 4px solid #ff6b5a;
+        padding: 16px 20px;
+        border-radius: 14px;
+        color: #7c2d12;
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .disclaimer-box * {
+        color: #7c2d12 !important;
+    }
+
     .badge {
         display: inline-flex;
         align-items: center;
         padding: 4px 12px;
         border-radius: 9999px;
-        font-size: 11.5px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        margin-right: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 6px;
         margin-bottom: 6px;
     }
 
     .badge-positive {
-        background-color: #ecfdf5;
-        color: #065f46;
-        border: 1px solid #a7f3d0;
-        box-shadow: 0 0 10px rgba(16, 185, 129, 0.12);
+        background-color: #a4d4c5;
+        color: #0a261e;
     }
 
     .badge-negative {
-        background-color: #fff1f2;
+        background-color: #ffd6df;
         color: #9f1239;
-        border: 1px solid #fecdd3;
-        box-shadow: 0 0 10px rgba(244, 63, 94, 0.12);
     }
 
     .badge-neutral {
-        background-color: #f8fafc;
-        color: #334155;
-        border: 1px solid #e2e8f0;
+        background-color: #f5f0e0;
+        color: #3a3a3a;
+        border: 1px solid #ebe6d6;
     }
 
     .badge-lang {
-        background-color: #eef2ff;
-        color: #3730a3;
-        border: 1px solid #c7d2fe;
-        box-shadow: 0 0 10px rgba(99, 102, 241, 0.1);
-    }
-
-    /* Disclaimer & Info Cards */
-    .disclaimer-box {
-        background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-        border-left: 5px solid #f59e0b;
-        padding: 14px 20px;
-        border-radius: 10px;
-        color: #78350f;
-        font-size: 13.5px;
-        line-height: 1.55;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 10px rgba(245, 158, 11, 0.08);
-    }
-
-    .info-box {
-        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-        border-left: 5px solid #3b82f6;
-        padding: 14px 20px;
-        border-radius: 10px;
-        color: #1e3a8a;
-        font-size: 13.5px;
-        line-height: 1.55;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 10px rgba(59, 130, 246, 0.08);
-    }
-
-    /* Input Fields */
-    div[data-baseweb="input"], div[data-baseweb="textarea"] {
-        border-radius: 10px !important;
-        border-color: #cbd5e1 !important;
-        transition: all 0.2s ease !important;
-    }
-
-    div[data-baseweb="input"]:focus-within, div[data-baseweb="textarea"]:focus-within {
-        border-color: #6366f1 !important;
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
-    }
-
-    /* Styled Modern Tabs */
-    button[data-baseweb="tab"] {
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-weight: 700 !important;
-        font-size: 13.5px !important;
-        padding: 10px 22px !important;
-        border-radius: 8px 8px 0 0 !important;
-        transition: all 0.2s ease !important;
-    }
-
-    button[data-baseweb="tab"][aria-selected="true"] {
-        background: rgba(99, 102, 241, 0.08) !important;
-        color: #4f46e5 !important;
-        border-bottom: 3px solid #6366f1 !important;
+        background-color: #b8a4ed;
+        color: #0a0a0a;
     }
 
     /* Tables */
     table {
         border-collapse: separate !important;
         border-spacing: 0 !important;
-        border-radius: 12px !important;
+        border-radius: 14px !important;
         overflow: hidden !important;
-        border: 1px solid #e2e8f0 !important;
-        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03) !important;
+        border: 1px solid #e5e5e5 !important;
+        background-color: #ffffff !important;
         width: 100% !important;
     }
 
     thead tr th {
-        background-color: #f8fafc !important;
-        color: #334155 !important;
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-weight: 700 !important;
-        font-size: 12.5px !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.5px !important;
+        background-color: #faf5e8 !important;
+        color: #0a0a0a !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 13px !important;
         padding: 12px 16px !important;
-        border-bottom: 2px solid #e2e8f0 !important;
+        border-bottom: 1px solid #e5e5e5 !important;
     }
 
     tbody tr td {
         padding: 12px 16px !important;
-        border-bottom: 1px solid #f1f5f9 !important;
+        border-bottom: 1px solid #f5f0e0 !important;
         font-size: 13.5px !important;
+        color: #1a1a1a !important;
     }
 
     tbody tr:hover {
-        background-color: #f8fafc !important;
+        background-color: #faf5e8 !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
 
-def render_hero(tag: str, title: str, subtitle: str, badge: str = "100% OPERATIONAL • REAL-TIME"):
-    """Renders a luxury, cyber-executive hero banner with pulsing status badges."""
+def render_hero(tag: str, title: str, subtitle: str, badge: str = "100% OPERATIONAL • REAL-TIME", variant: str = "cream"):
+    """Renders a Clay.com saturated single-color feature card or warm cream hero card."""
+    variants = {
+        "cream": {
+            "bg": "#faf5e8",
+            "border": "1px solid #ebe6d6",
+            "title_color": "#0a0a0a",
+            "sub_color": "#4a4a4a",
+            "tag_bg": "#0a0a0a",
+            "tag_color": "#ffffff",
+            "badge_bg": "#a4d4c5",
+            "badge_color": "#0a261e",
+            "dot_color": "#0a261e"
+        },
+        "lavender": {
+            "bg": "#b8a4ed",
+            "border": "none",
+            "title_color": "#0a0a0a",
+            "sub_color": "#2a2238",
+            "tag_bg": "#0a0a0a",
+            "tag_color": "#ffffff",
+            "badge_bg": "#ffffff",
+            "badge_color": "#0a0a0a",
+            "dot_color": "#0a0a0a"
+        },
+        "pink": {
+            "bg": "#ff4d8b",
+            "border": "none",
+            "title_color": "#ffffff",
+            "sub_color": "#fff0f5",
+            "tag_bg": "#ffffff",
+            "tag_color": "#ff4d8b",
+            "badge_bg": "rgba(255, 255, 255, 0.2)",
+            "badge_color": "#ffffff",
+            "dot_color": "#ffffff"
+        },
+        "teal": {
+            "bg": "#1a3a3a",
+            "border": "none",
+            "title_color": "#ffffff",
+            "sub_color": "#d2e3e3",
+            "tag_bg": "#a4d4c5",
+            "tag_color": "#1a3a3a",
+            "badge_bg": "rgba(255, 255, 255, 0.18)",
+            "badge_color": "#ffffff",
+            "dot_color": "#a4d4c5"
+        },
+        "ochre": {
+            "bg": "#e8b94a",
+            "border": "none",
+            "title_color": "#0a0a0a",
+            "sub_color": "#332607",
+            "tag_bg": "#0a0a0a",
+            "tag_color": "#ffffff",
+            "badge_bg": "#ffffff",
+            "badge_color": "#0a0a0a",
+            "dot_color": "#0a0a0a"
+        },
+        "mint": {
+            "bg": "#a4d4c5",
+            "border": "none",
+            "title_color": "#0a0a0a",
+            "sub_color": "#13382e",
+            "tag_bg": "#0a0a0a",
+            "tag_color": "#ffffff",
+            "badge_bg": "#ffffff",
+            "badge_color": "#0a0a0a",
+            "dot_color": "#0a0a0a"
+        },
+        "peach": {
+            "bg": "#ffb084",
+            "border": "none",
+            "title_color": "#0a0a0a",
+            "sub_color": "#4a210b",
+            "tag_bg": "#0a0a0a",
+            "tag_color": "#ffffff",
+            "badge_bg": "#ffffff",
+            "badge_color": "#0a0a0a",
+            "dot_color": "#0a0a0a"
+        }
+    }
+    cfg = variants.get(variant, variants["cream"])
+
     st.markdown(f"""
-    <div class="hero-container">
-        <div class="hero-top-row">
-            <span class="hero-pill-tag">{tag}</span>
-            <span class="hero-live-badge"><span class="pulsing-dot"></span> {badge}</span>
+    <div style="background: {cfg['bg']}; border: {cfg['border']}; border-radius: 24px; padding: 34px 40px; margin-bottom: 26px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+            <span style="background: {cfg['tag_bg']}; color: {cfg['tag_color']}; border-radius: 9999px; padding: 6px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;">
+                {tag}
+            </span>
+            <span style="background: {cfg['badge_bg']}; color: {cfg['badge_color']}; border-radius: 9999px; padding: 6px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 6px;">
+                <span style="width: 8px; height: 8px; background-color: {cfg['dot_color']}; border-radius: 50%; display: inline-block;"></span>
+                {badge}
+            </span>
         </div>
-        <h1 class="hero-title">{title}</h1>
-        <div class="hero-subtitle">{subtitle}</div>
+        <h1 style="font-family: 'Inter', sans-serif !important; font-size: 36px !important; font-weight: 600 !important; color: {cfg['title_color']} !important; margin: 0 0 10px 0 !important; line-height: 1.15 !important; letter-spacing: -1.5px !important;">
+            {title}
+        </h1>
+        <div style="font-size: 15.5px; color: {cfg['sub_color']}; line-height: 1.55; max-width: 960px; font-weight: 400;">
+            {subtitle}
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -474,17 +535,18 @@ if "demo_image_loaded" not in st.session_state:
 # ==============================================================================
 with st.sidebar:
     st.markdown("""
-    <div style="padding: 6px 0 16px 0; display: flex; align-items: center; gap: 12px;">
-        <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 4px 14px rgba(99,102,241,0.4);">
+    <div style="padding: 8px 0 16px 0; display: flex; align-items: center; gap: 12px;">
+        <div style="background: #0a0a0a; color: #ffffff; width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700;">
             ⚡
         </div>
         <div>
-            <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 19px; color: #ffffff; letter-spacing: -0.3px;">APEXTECH AI</div>
-            <div style="font-size: 11px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px;">Customer Service • Extended</div>
+            <div style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; color: #0a0a0a; letter-spacing: -0.5px;">ApexTech AI</div>
+            <div style="font-size: 11.5px; color: #6a6a6a; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Customer Service • Extended</div>
         </div>
     </div>
-    <div style="background: rgba(99, 102, 241, 0.12); padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(99, 102, 241, 0.25); font-size: 0.8rem; margin-bottom: 16px; color: #c7d2fe;">
-        <span class="pulsing-dot" style="margin-right: 6px;"></span> <b>Elevance Skills</b> — 6 Tasks Integrated (100%)
+    <div style="background: #ffffff; padding: 10px 14px; border-radius: 12px; border: 1px solid #e5e5e5; font-size: 0.82rem; margin-bottom: 16px; color: #0a0a0a; display: flex; align-items: center; gap: 8px;">
+        <span style="display:inline-block; width:8px; height:8px; background:#22c55e; border-radius:50%;"></span>
+        <span><b>Elevance Skills</b> — 6 Tasks (100%)</span>
     </div>
     """, unsafe_allow_html=True)
     
@@ -549,10 +611,11 @@ image_generator = ImageGenerator(api_key=user_api_key)
 # ==============================================================================
 if nav_choice == "📁 Task 1: Dynamic Knowledge Base":
     render_hero(
-        tag="⚡ TASK 1: CONTINUOUS RETRIEVAL PIPELINE",
+        tag="TASK 1 • CONTINUOUS RETRIEVAL",
         title="Dynamic Knowledge Base Manager",
         subtitle="Continuous document ingestion, SHA-256 differential checksum tracking, 60s background auto-sync, and 384-dimensional vector re-indexing.",
-        badge="AUTO-SYNC ACTIVE • 60s"
+        badge="AUTO-SYNC ACTIVE • 60s",
+        variant="lavender"
     )
 
     stats = kb_manager.get_stats()
@@ -618,14 +681,25 @@ if nav_choice == "📁 Task 1: Dynamic Knowledge Base":
     with col_b:
         st.markdown("#### 2. Test Real-Time Semantic Retrieval")
         st.write("Query the knowledge base to confirm the newly indexed information is immediately retrievable:")
-        kb_query = st.text_input("Test Query:", value=st.session_state.kb_test_query)
-        
-        if kb_query:
-            matches = kb_manager.query(kb_query, top_k=3)
-            st.write(f"Found **{len(matches)}** matching chunks:")
-            for idx, m in enumerate(matches):
-                with st.expander(f"Rank {idx+1}: {m.get('source', 'Unknown')} (Similarity: {m.get('score', 0):.3f})", expanded=(idx==0)):
-                    st.write(m.get("text", ""))
+        test_query = st.text_input("Search Policy Query:", value=st.session_state.kb_test_query)
+        if st.button("🔍 Search Knowledge Base", use_container_width=True):
+            with st.spinner("Searching vector index..."):
+                results = kb_manager.query(test_query, top_k=3)
+                if results:
+                    st.markdown(f"**Found {len(results)} relevant passages:**")
+                    for i, r in enumerate(results):
+                        score = r.get("score", 0.0)
+                        st.markdown(f"""
+                        <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:14px; padding:16px 20px; margin-bottom:12px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                                <span style="font-weight:600; color:#0a0a0a; font-size:14px;">📄 {r.get('source', 'Unknown')}</span>
+                                <span style="font-size:11px; font-weight:700; color:#16a34a; background:#f0fdf4; padding:2px 8px; border-radius:999px;">Match Score: {score:.3f}</span>
+                            </div>
+                            <div style="font-size:13.5px; color:#3a3a3a; line-height:1.5;">{r.get('text', '')}</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                else:
+                    st.warning("No matches found in the knowledge base.")
 
         st.markdown("---")
         st.markdown("#### 🔄 Force Manual Rescan")
@@ -640,10 +714,11 @@ if nav_choice == "📁 Task 1: Dynamic Knowledge Base":
 # ==============================================================================
 elif nav_choice == "🎨 Task 2: Multimodal Chatbot & Vision Lab":
     render_hero(
-        tag="🎨 TASK 2: DUAL-MODALITY VISION LAB",
+        tag="TASK 2 • DUAL-MODALITY VISION",
         title="Multimodal Vision & Concept Synthesis",
         subtitle="Visual hardware defect inspection (Image-to-Text) with Google Gemini Vision and diffusion-driven replacement rendering (Text-to-Image) with Google Imagen 3.",
-        badge="GEMINI 2.0 / IMAGEN 3"
+        badge="GEMINI 2.0 / IMAGEN 3",
+        variant="pink"
     )
 
     tab1, tab2 = st.tabs(["📸 Image Analysis & Defect Inspection (Image-to-Text)", "🎨 Concept Visual Generation (Text-to-Image)"])
@@ -666,26 +741,23 @@ elif nav_choice == "🎨 Task 2: Multimodal Chatbot & Vision Lab":
         elif st.session_state.demo_image_loaded:
             img_to_analyze = get_demo_damaged_image()
 
-        vision_prompt = st.text_input(
-            "Vision Inspection Prompt:",
-            "What physical problem can you identify with this product, and how should customer service resolve it under warranty?"
-        )
-
         if img_to_analyze:
-            c1, c2 = st.columns([1, 2])
-            with c1:
-                st.image(img_to_analyze, caption="Product Inspection Capture", use_container_width=True)
-            with c2:
-                if st.button("🔍 Run Multimodal Vision Inspection", use_container_width=True):
-                    with st.spinner("Analyzing visual features and physical condition..."):
-                        report = multimodal_analyzer.analyze_image(img_to_analyze, vision_prompt)
-                        st.markdown(report["text"])
+            col_preview, col_findings = st.columns([1, 1.2])
+            with col_preview:
+                st.image(img_to_analyze, caption="Product Intake Photo", use_container_width=True)
+            
+            with col_findings:
+                prompt = st.text_input("Analysis Request:", value="Analyze this product image for hardware defects and suggest warranty resolution.")
+                if st.button("🔬 Run Multimodal Diagnostic Inspection", use_container_width=True):
+                    with st.spinner("Analyzing image features with Vision AI..."):
+                        report = multimodal_analyzer.analyze_image(img_to_analyze, prompt)
+                        st.markdown(f"### 📋 Diagnostic Assessment\n{report['text']}")
                         
-                        engine_color = "#16a34a" if "Gemini" in report["engine"] else "#475569"
                         st.markdown(f"""
-                        <div style="padding: 8px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 12px; margin-top: 10px;">
-                            <b>Active Engine:</b> <span style="color: {engine_color}; font-weight: 700;">{report['engine']}</span><br>
-                            <b>Image Specifications:</b> {report.get('image_meta', {})}
+                        <div style="padding: 10px 16px; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px; font-size: 13px; margin-top: 10px; color: #1a1a1a;">
+                            <b>Hardware Defect Identified:</b> <code>{report.get('defect_type', 'N/A')}</code> &nbsp;|&nbsp; 
+                            <b>Severity:</b> <span style="padding:2px 8px; background:#fee2e2; color:#991b1b; border-radius:4px; font-weight:600;">{report.get('severity', 'Medium')}</span> &nbsp;|&nbsp; 
+                            <b>Vision Model:</b> <code>{report.get('engine', 'Gemini')}</code>
                         </div>
                         """, unsafe_allow_html=True)
 
@@ -717,10 +789,11 @@ elif nav_choice == "🎨 Task 2: Multimodal Chatbot & Vision Lab":
 # ==============================================================================
 elif nav_choice == "🏥 Task 3: Medical Q&A (MedQuAD)":
     render_hero(
-        tag="🏥 TASK 3: NIH CLINICAL KNOWLEDGE SYSTEM",
+        tag="TASK 3 • NIH CLINICAL SYSTEM",
         title="Medical Q&A Assistant — MedQuAD Grounded",
         subtitle="Official NIH MedQuAD clinical question-answer retrieval with clinical entity recognition, grounded reasoning, and mandatory educational disclaimers.",
-        badge="NIH MEDQUAD VERIFIED"
+        badge="NIH MEDQUAD VERIFIED",
+        variant="teal"
     )
 
     st.markdown("""
@@ -730,8 +803,8 @@ elif nav_choice == "🏥 Task 3: Medical Q&A (MedQuAD)":
     """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:16px; font-size:13.5px;">
-        📚 <b>Dataset Source:</b> <a href="https://github.com/abachaa/MedQuAD" target="_blank">abachaa/MedQuAD (NIH National Library of Medicine)</a> | 
+    <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:14px; padding:14px 18px; margin-bottom:16px; font-size:13.5px; color:#1a1a1a;">
+        📚 <b>Dataset Source:</b> <a href="https://github.com/abachaa/MedQuAD" target="_blank" style="color:#0a0a0a; font-weight:600;">abachaa/MedQuAD (NIH National Library of Medicine)</a> | 
         <b>Loaded Scope:</b> 116 Clinical QA Pairs across 17 representative condition XMLs (NIDDK, NHLBI, CDC, GHR)
     </div>
     """, unsafe_allow_html=True)
@@ -748,62 +821,48 @@ elif nav_choice == "🏥 Task 3: Medical Q&A (MedQuAD)":
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
             if "entities" in msg and msg["entities"]:
-                st.info(f"**Detected Medical Entities:**\n\n{MedicalEntityExtractor.format_entities_for_display(msg['entities'])}")
+                st.markdown("**Identified Clinical Entities:**")
+                ent_html = ""
+                for cat, items in msg["entities"].items():
+                    if items:
+                        ent_html += f"<b>{cat.replace('_', ' ').title()}:</b> " + " ".join([f"<span class='badge badge-lang'>{it}</span>" for it in items]) + " "
+                st.markdown(ent_html, unsafe_allow_html=True)
             if "retrieved" in msg and msg["retrieved"]:
-                with st.expander("🏥 Retrieved MedQuAD Reference Evidence"):
+                with st.expander("📚 MedQuAD Evidence Passages"):
                     for r in msg["retrieved"]:
                         st.markdown(f"**Focus:** {r.get('focus')} | **QType:** {r.get('qtype')} | **Relevance:** {r.get('score', 0):.2f}")
                         st.write(r.get("text", ""))
 
-    med_query = None
-    if ex1: med_query = "What is Acromegaly and what causes it?"
-    elif ex2: med_query = "What are the common symptoms of Addison's disease?"
-    elif ex3: med_query = "How can I lower my risk of getting Type 2 Diabetes?"
-    elif ex4: med_query = "What treatments and medications are used for asthma?"
+    med_prompt = st.chat_input("Ask a clinical or symptom question (e.g., 'What are the risk factors for glaucoma?')...")
+    
+    # Check trigger from example buttons
+    if ex1: med_prompt = "What is Acromegaly?"
+    elif ex2: med_prompt = "What are the common symptoms of Addison's Disease?"
+    elif ex3: med_prompt = "How can Type 2 Diabetes be prevented?"
+    elif ex4: med_prompt = "What are the standard treatments for Asthma?"
 
-    input_prompt = st.chat_input("Ask a medical inquiry (e.g. 'What are the symptoms of acromegaly?')...")
-    if input_prompt:
-        med_query = input_prompt
-
-    if med_query:
-        # Language Detection
-        det_lang = LanguageDetector.detect_language(med_query)
-        active_lang_name = LanguageDetector.SUPPORTED_LANGUAGES.get(manual_lang_code or det_lang["code"], "English")
-
-        # Entity Extraction (Task 3)
-        entities = MedicalEntityExtractor.extract_entities(med_query)
-
-        # Retrieval from MedQuAD
-        retrieved_med = medical_retriever.retrieve(med_query, top_k=2)
-        med_context = ""
-        for item in retrieved_med:
-            med_context += f"Focus: {item.get('focus')}\nQuestion: {item.get('question')}\nAnswer: {item.get('answer')}\n\n"
-
-        st.session_state.medical_messages.append({"role": "user", "content": med_query})
-
+    if med_prompt:
+        st.session_state.medical_messages.append({"role": "user", "content": med_prompt})
         with st.chat_message("user"):
-            st.markdown(med_query)
+            st.markdown(med_prompt)
 
         with st.chat_message("assistant"):
-            st.markdown(f"**Detected Clinical Entities:**\n\n{MedicalEntityExtractor.format_entities_for_display(entities)}")
-            
-            with st.spinner("Retrieving verified NIH MedQuAD knowledge..."):
-                sys_inst = (
-                    "You are an educational medical knowledge assistant grounded exclusively in MedQuAD. "
-                    "Cite symptoms, causes, or treatments directly from the provided text. "
-                    "Include the educational disclaimer at the conclusion."
-                )
-                med_resp = llm_client.generate_response(
-                    prompt=med_query,
-                    system_instruction=sys_inst,
-                    conversation_history=st.session_state.medical_messages,
-                    retrieved_context=med_context,
-                    target_language=active_lang_name
-                )
+            with st.spinner("Retrieving NIH MedQuAD evidence and verifying clinical context..."):
+                med_resp = medical_retriever.answer_medical_query(med_prompt, llm_client=llm_client)
                 st.markdown(med_resp["text"])
-
+                
+                entities = med_resp.get("entities", {})
+                if any(entities.values()):
+                    st.markdown("**Identified Clinical Entities:**")
+                    ent_html = ""
+                    for cat, items in entities.items():
+                        if items:
+                            ent_html += f"<b>{cat.replace('_', ' ').title()}:</b> " + " ".join([f"<span class='badge badge-lang'>{it}</span>" for it in items]) + " "
+                    st.markdown(ent_html, unsafe_allow_html=True)
+                
+                retrieved_med = med_resp.get("retrieved_records", [])
                 if retrieved_med:
-                    with st.expander("🏥 Retrieved MedQuAD Reference Evidence"):
+                    with st.expander(f"📚 Retrieved MedQuAD Evidence ({len(retrieved_med)} Records)"):
                         for r in retrieved_med:
                             st.markdown(f"**Focus:** {r.get('focus')} | **QType:** {r.get('qtype')} | **Relevance:** {r.get('score', 0):.2f}")
                             st.write(r.get("text", ""))
@@ -820,15 +879,16 @@ elif nav_choice == "🏥 Task 3: Medical Q&A (MedQuAD)":
 # ==============================================================================
 elif nav_choice == "🔬 Task 4: Scientific Expert (arXiv)":
     render_hero(
-        tag="🔬 TASK 4: CORNELL ARXIV AI RESEARCH LAB",
+        tag="TASK 4 • CORNELL ARXIV LAB",
         title="Scientific Research Expert — arXiv Computer Science",
         subtitle="Retrieval-augmented research exploration, structured 5-part academic summarizer, dual-level intuitive vs. mathematical explanations, and Plotly concept maps.",
-        badge="CORNELL ARXIV CS SUBSET"
+        badge="CORNELL ARXIV CS SUBSET",
+        variant="ochre"
     )
 
     st.markdown("""
-    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:16px; font-size:13.5px;">
-        📚 <b>Dataset Source:</b> <a href="https://www.kaggle.com/datasets/Cornell-University/arxiv" target="_blank">Cornell University arXiv Dataset</a> | 
+    <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:14px; padding:14px 18px; margin-bottom:16px; font-size:13.5px; color:#1a1a1a;">
+        📚 <b>Dataset Source:</b> <a href="https://www.kaggle.com/datasets/Cornell-University/arxiv" target="_blank" style="color:#0a0a0a; font-weight:600;">Cornell University arXiv Dataset</a> | 
         <b>Curated Subset:</b> 35 Landmark AI/ML Papers across <code>cs.AI</code>, <code>cs.LG</code>, <code>cs.CV</code>, and <code>cs.CL</code> | 
         <b>Inference Pipeline:</b> Dense retrieval via <code>sentence-transformers/all-MiniLM-L6-v2</code> + Grounded RAG synthesis
     </div>
@@ -846,105 +906,99 @@ elif nav_choice == "🔬 Task 4: Scientific Expert (arXiv)":
         r_c1, r_c2, r_c3 = st.columns(3)
         rq1 = r_c1.button("Explain self-attention simply")
         rq2 = r_c2.button("Explain self-attention mathematically")
-        rq3 = r_c3.button("Find papers about Vision Transformers")
+        rq3 = r_c3.button("Summarize Attention Is All You Need")
 
-        for msg in st.session_state.research_messages:
-            with st.chat_message(msg["role"]):
-                st.markdown(msg["content"])
-                if "papers" in msg and msg["papers"]:
-                    with st.expander(f"📚 Related arXiv Papers ({len(msg['papers'])})"):
-                        for p in msg["papers"]:
-                            st.markdown(f"**[{p.get('title')}]({p.get('url')})** (arXiv:{p.get('chunk_id')})")
-                            st.caption(f"Authors: {p.get('authors')}")
-                            st.write(p.get("abstract", ""))
+        for rmsg in st.session_state.research_messages:
+            with st.chat_message(rmsg["role"]):
+                st.markdown(rmsg["content"])
 
-        user_res_query = None
-        if rq1: user_res_query = "Explain self-attention simply."
-        elif rq2: user_res_query = "Explain self-attention mathematically with formulas."
-        elif rq3: user_res_query = "Find papers about transformer architectures for image classification."
+        r_prompt = st.chat_input("Ask a research or AI concept question...")
+        if rq1: r_prompt = "Explain self-attention mechanism in simple terms with an analogy"
+        elif rq2: r_prompt = "Explain self-attention mathematically with formulas"
+        elif rq3: r_prompt = "Summarize the key contributions of Attention Is All You Need (1706.03762)"
 
-        res_input = st.chat_input("Ask a scientific question or search for CS papers...")
-        if res_input: user_res_query = res_input
-
-        if user_res_query:
-            matched_papers = arxiv_searcher.search_papers(user_res_query, top_k=3)
-            papers_context = ""
-            for p in matched_papers:
-                papers_context += f"Paper Title: {p.get('title')}\nAuthors: {p.get('authors')}\nAbstract: {p.get('abstract')}\n\n"
-
-            st.session_state.research_messages.append({"role": "user", "content": user_res_query})
-
+        if r_prompt:
+            st.session_state.research_messages.append({"role": "user", "content": r_prompt})
             with st.chat_message("user"):
-                st.markdown(user_res_query)
+                st.markdown(r_prompt)
 
             with st.chat_message("assistant"):
-                with st.spinner("Searching arXiv index and generating explanation..."):
-                    sys_inst = (
-                        "You are an expert AI research scientist assisting with Computer Science papers. "
-                        "Explain concepts clearly, cite paper titles/authors where relevant, "
-                        "and support mathematical depth if requested."
-                    )
-                    res_reply = llm_client.generate_response(
-                        prompt=user_res_query,
-                        system_instruction=sys_inst,
-                        conversation_history=st.session_state.research_messages,
-                        retrieved_context=papers_context,
-                        target_language="English"
-                    )
-                    st.markdown(res_reply["text"])
-
-                    if matched_papers:
-                        with st.expander(f"📚 Related arXiv Papers ({len(matched_papers)})"):
-                            for p in matched_papers:
-                                st.markdown(f"**[{p.get('title')}]({p.get('url')})** (arXiv:{p.get('chunk_id')})")
-                                st.caption(f"Authors: {p.get('authors')}")
-                                st.write(p.get("abstract", ""))
+                with st.spinner("Searching arXiv papers & formulating explanation..."):
+                    res_ans = arxiv_searcher.answer_research_query(r_prompt, llm_client=llm_client)
+                    st.markdown(res_ans["text"])
+                    if res_ans.get("papers"):
+                        with st.expander("📄 Relevant arXiv Papers Retrieved"):
+                            for p in res_ans["papers"]:
+                                st.markdown(f"**[{p.get('id')}] {p.get('title')}** ({', '.join(p.get('categories', []))})")
+                                st.caption(p.get("abstract", "")[:300] + "...")
 
             st.session_state.research_messages.append({
                 "role": "assistant",
-                "content": res_reply["text"],
-                "papers": matched_papers
+                "content": res_ans["text"]
             })
 
     with res_tab2:
-        st.markdown("### 📄 Structured Research Paper Summarizer")
-        st.write("Extracts standardized academic summaries: *Problem Addressed, Main Idea, Approach, Results, and Conclusion*.")
+        st.markdown("### 📄 Structured 5-Part Academic Summarizer")
         all_papers = arxiv_searcher.get_all_papers()
-        paper_titles = [f"{p['id']} - {p['title']}" for p in all_papers]
-        selected_idx = st.selectbox("Select paper to summarize:", range(len(paper_titles)), format_func=lambda x: paper_titles[x])
-        
-        selected_paper = all_papers[selected_idx]
-        structured_summary = PaperSummarizer.structure_summary_from_abstract(
-            title=selected_paper["title"],
-            abstract=selected_paper["abstract"],
-            authors=selected_paper["authors_display"]
-        )
-        st.markdown(PaperSummarizer.format_markdown_summary(structured_summary))
-        st.link_button("🔗 View Original Paper on arXiv", selected_paper["url"])
+        paper_titles = [f"[{p['id']}] {p['title']}" for p in all_papers]
+        selected_paper_str = st.selectbox("Select arXiv Paper to Summarize:", paper_titles)
+
+        if selected_paper_str:
+            sel_id = selected_paper_str.split("]")[0].replace("[", "")
+            sel_paper = next((p for p in all_papers if p["id"] == sel_id), None)
+            
+            if sel_paper:
+                st.markdown(f"#### **{sel_paper['title']}**")
+                st.markdown(f"*Authors:* {', '.join(sel_paper['authors'])} | *Categories:* `{', '.join(sel_paper['categories'])}` | *Published:* {sel_paper['published']}")
+                
+                if st.button("📑 Generate Structured 5-Part Summary", use_container_width=True):
+                    with st.spinner("Synthesizing structured academic breakdown..."):
+                        s_summary = arxiv_searcher.generate_structured_summary(sel_paper, llm_client=llm_client)
+                        
+                        st.markdown("##### 1. 🎯 Research Problem & Context")
+                        st.write(s_summary.get("problem", "N/A"))
+                        
+                        st.markdown("##### 2. 💡 Methodology & Technical Architecture")
+                        st.write(s_summary.get("methodology", "N/A"))
+                        
+                        st.markdown("##### 3. 🏆 Key Findings & Empirical Results")
+                        st.write(s_summary.get("results", "N/A"))
+                        
+                        st.markdown("##### 4. ⚠️ Stated Limitations")
+                        st.write(s_summary.get("limitations", "N/A"))
+                        
+                        st.markdown("##### 5. 🔮 Future Work & Implications")
+                        st.write(s_summary.get("future_work", "N/A"))
 
     with res_tab3:
-        st.markdown("### 💡 Intuitive vs. Mathematical Explanations")
-        st.write("Demonstrates dual-level pedagogical explanations for core deep learning innovations:")
-        
+        st.markdown("### 💡 Dual-Level Concept Explanations")
         concept_choice = st.selectbox(
-            "Select AI Innovation:",
-            ["Self-Attention Mechanism", "Transformer Architecture", "Low-Rank Adaptation (LoRA)", "Vision Transformer (ViT)"]
+            "Select Foundational AI/ML Concept:",
+            ["Self-Attention Mechanism", "Transformer Architecture", "Residual Connections", "Diffusion Probabilistic Models", "FlashAttention", "Adam Optimizer"]
         )
-        exp_data = PaperSummarizer.explain_concept(concept_choice)
-        
-        e_col1, e_col2 = st.columns(2)
-        with e_col1:
-            st.markdown(f"#### 🧸 Intuitive Analogy: {exp_data['concept']}")
-            st.info(exp_data["intuitive"])
-        with e_col2:
-            st.markdown(f"#### 📐 Formal Mathematical Formulation: {exp_data['concept']}")
-            st.success(exp_data["mathematical"])
+
+        col_int, col_math = st.columns(2)
+        with col_int:
+            st.markdown("#### 🌟 Intuitive / High-Level Explanation")
+            if st.button(f"Generate Intuitive: {concept_choice}", use_container_width=True):
+                with st.spinner("Drafting conceptual explanation with real-world analogies..."):
+                    exp_int = arxiv_searcher.explain_concept(concept_choice, level="intuitive", llm_client=llm_client)
+                    st.info(exp_int["text"])
+
+        with col_math:
+            st.markdown("#### 📐 Mathematical / Formal Formulation")
+            if st.button(f"Generate Mathematical: {concept_choice}", use_container_width=True):
+                with st.spinner("Formulating rigorous mathematical definition and equations..."):
+                    exp_math = arxiv_searcher.explain_concept(concept_choice, level="mathematical", llm_client=llm_client)
+                    st.success(exp_math["text"])
 
     with res_tab4:
-        st.markdown("### 📊 Interactive Network Visualizations")
+        st.markdown("### 📊 Interactive Research & Concept Visualizations")
+        st.caption("Interactive visual maps generated with Plotly to explore categories and concept citation dependencies:")
+        
         v_col1, v_col2 = st.columns(2)
         with v_col1:
-            st.plotly_chart(ResearchVisualizer.create_paper_topic_graph(arxiv_searcher.get_all_papers()), use_container_width=True)
+            st.plotly_chart(ResearchVisualizer.create_category_distribution(), use_container_width=True)
         with v_col2:
             st.plotly_chart(ResearchVisualizer.create_concept_graph(), use_container_width=True)
 
@@ -953,10 +1007,11 @@ elif nav_choice == "🔬 Task 4: Scientific Expert (arXiv)":
 # ==============================================================================
 elif nav_choice == "📊 Task 5: Sentiment Analysis & Evaluation":
     render_hero(
-        tag="📊 TASK 5: REAL-TIME EMOTIONAL INTELLIGENCE & EVALUATION",
+        tag="TASK 5 • EMOTIONAL INTELLIGENCE",
         title="Sentiment Polarity Engine & Benchmark Dashboard",
         subtitle="VADER compound polarity scoring, dynamic empathetic tone de-escalation for frustrated customers, and quantitative benchmark evaluation.",
-        badge="NLTK VADER • 76.7% ACCURACY"
+        badge="NLTK VADER • 76.7% ACCURACY",
+        variant="mint"
     )
 
     st.markdown("### 📊 Quantitative Evaluation on `data/sentiment_test.csv`")
@@ -1010,7 +1065,7 @@ elif nav_choice == "📊 Task 5: Sentiment Analysis & Evaluation":
         c_res3.metric("Pos / Neu / Neg Breakdown", f"{s_res['scores']['pos']} / {s_res['scores']['neu']} / {s_res['scores']['neg']}")
 
         st.markdown(f"""
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:14px 18px; margin-top:12px;">
+        <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:14px; padding:14px 18px; margin-top:12px; color:#1a1a1a;">
             <b>🎧 Customer Service Response Strategy:</b><br>
             <i>{s_res['tone_guidance']}</i>
         </div>
@@ -1021,10 +1076,11 @@ elif nav_choice == "📊 Task 5: Sentiment Analysis & Evaluation":
 # ==============================================================================
 elif nav_choice == "🌐 Task 6: Multilingual Chatbot Showcase":
     render_hero(
-        tag="🌐 TASK 6: GLOBAL LANGUAGE PROCESSING",
+        tag="TASK 6 • GLOBAL PROCESSING",
         title="Multilingual Customer Experience Engine",
         subtitle="Automated script heuristics, Devanagari regex extraction, cross-lingual context preservation, and localized cultural empathy across English, Hindi, Spanish, and French.",
-        badge="4 LANGUAGES SUPPORTED"
+        badge="4 LANGUAGES SUPPORTED",
+        variant="peach"
     )
 
     st.markdown("### 🧪 Real-Time Language Detection & Empathy Test Bench")
@@ -1042,28 +1098,27 @@ elif nav_choice == "🌐 Task 6: Multilingual Chatbot Showcase":
     elif b_es: lang_demo_text = "¿Puedo devolver este producto si está dañado y obtener un reemplazo?"
     elif b_fr: lang_demo_text = "Bonjour, mon colis est arrivé endommagé et je souhaite un remboursement rapide."
 
-    custom_lang_input = st.text_input("Enter text in any supported language:", value=lang_demo_text)
-    
+    custom_lang_input = st.text_input("Enter multilingual customer message:", value=lang_demo_text)
     if custom_lang_input:
-        det_res = LanguageDetector.detect_language(custom_lang_input)
-        code = det_res["code"]
-
+        det = LanguageDetector.detect_language(custom_lang_input)
+        
         c_l1, c_l2, c_l3 = st.columns(3)
-        c_l1.metric("Detected Language", det_res["display"])
-        c_l2.metric("Detection Confidence", f"{det_res['confidence'] * 100:.0f}%")
-        c_l3.metric("ISO-639-1 Code", code)
+        c_l1.metric("Detected Language", det.get("display", det.get("name", "Unknown")))
+        c_l2.metric("Detection Confidence", f"{det.get('confidence', 1.0) * 100:.0f}%")
+        c_l3.metric("ISO-639-1 Code", det.get("code", "en").upper())
 
-        st.markdown("#### 💬 Localized Response Templates for Detected Language:")
-        t_col1, t_col2 = st.columns(2)
-        with t_col1:
-            st.markdown(f"**Empathetic Apology Prefix ({det_res['name']}):**")
-            st.info(MultilingualHandler.get_empathy_prefix(code))
-        with t_col2:
-            st.markdown(f"**Customer Service Greeting ({det_res['name']}):**")
-            st.success(MultilingualHandler.get_greeting(code))
+        st.markdown("#### 💬 Localized Empathetic Response Generation")
+        localized_empathy = MultilingualHandler.get_empathy_prefix(det["code"])
+        st.markdown(f"""
+        <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:14px; padding:16px 20px; margin-top:8px;">
+            <b>Localized Empathy Template ({det.get('name', 'English')}):</b><br>
+            <span style="font-size: 15px; color: #0a0a0a; font-weight: 500;">"{localized_empathy}"</span>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.divider()
-    st.markdown("### 🌐 Cross-Language Capability Matrix")
+
+    st.markdown("### 🌐 Multilingual Capabilities Matrix")
     matrix_data = [
         {"Language": "🇺🇸 English", "Code": "en", "Detection Method": "Character & Lexical N-grams", "Empathy Phrasing": "I completely understand your frustration and apologize..."},
         {"Language": "🇮🇳 Hindi (हिंदी)", "Code": "hi", "Detection Method": "Devanagari Unicode Regex [\\u0900-\\u097F]", "Empathy Phrasing": "मैं आपकी निराशा को पूरी तरह समझता हूँ और क्षमा चाहता हूँ..."},
@@ -1077,10 +1132,11 @@ elif nav_choice == "🌐 Task 6: Multilingual Chatbot Showcase":
 # ==============================================================================
 elif nav_choice == "📋 Internship Requirements & Audit Matrix":
     render_hero(
-        tag="📋 ELEVANCE SKILLS INTERNSHIP AUDIT",
+        tag="ELEVANCE SKILLS AUDIT",
         title="Requirements Compliance & Verification Matrix",
         subtitle="Comprehensive audit verifying 100% completion of all six required internship tasks in one unified, production-ready Streamlit application.",
-        badge="STIPEND VERIFIED • 100%"
+        badge="STIPEND VERIFIED • 100%",
+        variant="cream"
     )
 
     st.markdown("### 🌟 All Six Internship Tasks — 100% Completion Status")
@@ -1148,7 +1204,8 @@ else:
         tag="✨ ELEVANCE SKILLS EXTENDED ARCHITECTURE • ENTERPRISE DEMO",
         title="ApexTech GenAI Customer Support — Extended",
         subtitle="Autonomous multi-turn conversational agent with real-time sentiment analysis, dynamic knowledge retrieval, visual defect inspection, and cross-lingual translation.",
-        badge="ALL 6 MODULES CONNECTED"
+        badge="ALL 6 MODULES CONNECTED",
+        variant="cream"
     )
 
     # 4 Quick Scenario Test Buttons
