@@ -1,7 +1,10 @@
 import os
 import hashlib
 from typing import List, Dict, Any
-from pypdf import PdfReader
+try:
+    from pypdf import PdfReader
+except ImportError:
+    PdfReader = None
 
 class DocumentLoader:
     """Loads text, markdown, and PDF documents with metadata and checksums."""
@@ -36,6 +39,8 @@ class DocumentLoader:
             with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
         elif ext == '.pdf':
+            if PdfReader is None:
+                raise ImportError("pypdf is required to read PDF files. Install it with 'pip install pypdf'.")
             reader = PdfReader(filepath)
             pages_text = []
             for i, page in enumerate(reader.pages):
