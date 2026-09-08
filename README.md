@@ -346,3 +346,18 @@ git push -u origin master
 * **Author / Candidate**: Alvira Parveen
 * **Repository**: [https://github.com/Alvira-Parveen/Real-Time_GenAI_Customer_Service_Bot](https://github.com/Alvira-Parveen/Real-Time_GenAI_Customer_Service_Bot)
 
+---
+
+## 👩‍💻 Author
+
+**Name**: ALVIRA PARVEEN  
+🔗 [LinkedIn](https://www.linkedin.com/in/alvira-parveen-78022536b)  
+🌐 [GitHub](https://github.com/Alvira-Parveen)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
