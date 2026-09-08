@@ -89,10 +89,10 @@ flowchart TD
     end
 
     subgraph Storage ["Persistent Vector Indices & Datasets"]
-        KB_DATA[(data/customer_service/)] --> KB_IDX[(Customer Service Index)]
-        MED_DATA[(data/medquad/)] --> MED_IDX[(MedQuAD Index)]
-        ARXIV_DATA[(data/arxiv/)] --> ARXIV_IDX[(arXiv Index)]
-        SENT_DATA[(data/sentiment_test.csv)]
+        KB_DATA[(datasets/customer_service/)] --> KB_IDX[(Customer Service Index)]
+        MED_DATA[(datasets/medquad/)] --> MED_IDX[(MedQuAD Index)]
+        ARXIV_DATA[(datasets/arxiv/)] --> ARXIV_IDX[(arXiv Index)]
+        SENT_DATA[(datasets/sentiment_test.csv)]
         
         C3 <--> KB_IDX
         M2 <--> MED_IDX
@@ -142,10 +142,10 @@ The application relies on four distinct datasets across the various operational 
 
 | Task | Dataset / Source | Local Path | Records / Files | Purpose |
 |:---|:---|:---|:---|:---|
-| **Task 1: Dynamic Knowledge Base** | Enterprise Customer Service Corpus (Policies, FAQ, Catalog, Warranty) | `data/customer_service/` | 5 documents, 22 semantic chunks | Dynamic knowledge ingestion, sliding-window chunking, SHA-256 change tracking, and vector search |
-| **Task 3: Medical Q&A** | [NIH MedQuAD Dataset](https://github.com/abachaa/MedQuAD) (Official GitHub Repository) | `data/medquad/` (`raw_xml/` & `medquad_qa.json`) | 116 QA pairs across 17 representative condition XMLs | Clinical entity recognition, semantic retrieval, and grounded medical Q&A with disclaimer |
-| **Task 4: Research Expert** | [Cornell University arXiv Dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) (CS Subset) | `data/arxiv/arxiv_cs_papers.json` | 35 landmark Computer Science papers | Retrieval-augmented scientific expert chatbot using an arXiv dataset subset (search, 5-part summarizer, math explanations, network graphs) |
-| **Task 5: Sentiment Analysis** | Customer Service Sentiment Benchmark Split | `data/sentiment_test.csv` | 30 labeled customer service interactions | Empirical demonstration evaluation of VADER polarity classification and empathy routing |
+| **Task 1: Dynamic Knowledge Base** | Enterprise Customer Service Corpus (Policies, FAQ, Catalog, Warranty) | `datasets/customer_service/` | 5 documents, 22 semantic chunks | Dynamic knowledge ingestion, sliding-window chunking, SHA-256 change tracking, and vector search |
+| **Task 3: Medical Q&A** | [NIH MedQuAD Dataset](https://github.com/abachaa/MedQuAD) (Official GitHub Repository) | `datasets/medquad/` (`raw_xml/` & `medquad_qa.json`) | 116 QA pairs across 17 representative condition XMLs | Clinical entity recognition, semantic retrieval, and grounded medical Q&A with disclaimer |
+| **Task 4: Research Expert** | [Cornell University arXiv Dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) (CS Subset) | `datasets/arxiv/arxiv_cs_papers.json` | 35 landmark Computer Science papers | Retrieval-augmented scientific expert chatbot using an arXiv dataset subset (search, 5-part summarizer, math explanations, network graphs) |
+| **Task 5: Sentiment Analysis** | Customer Service Sentiment Benchmark Split | `datasets/sentiment_test.csv` | 30 labeled customer service interactions | Empirical demonstration evaluation of VADER polarity classification and empathy routing |
 
 #### Detailed Dataset Notes:
 1. **MedQuAD Subset Rationale**: The full MedQuAD repository contains ~47,457 questions across 12 NIH collections and several gigabytes of XML data. To maintain sub-second local retrieval latency and eliminate heavyweight database dependencies during local evaluation, a curated representative subset of 116 question-answer pairs spanning 17 major condition XMLs (diabetes, acromegaly, celiac disease, cirrhosis, asthma, hypertension, arthritis, etc.) was extracted directly from the official repository (`abachaa/MedQuAD`).
@@ -159,7 +159,7 @@ The application relies on four distinct datasets across the various operational 
   - `modules/knowledge_base/loader.py`: Recursive document extraction supporting `.txt`, `.md`, and `.pdf` files.
   - `modules/knowledge_base/chunker.py`: Sliding-window semantic chunker (450 characters, 50-character overlap).
   - `modules/knowledge_base/updater.py`: SHA-256 checksum registry tracking file additions, modifications, and deletions.
-  - **Periodic / Automatic Update Mechanism**: A background periodic update checker runs automatically every 60 seconds (`check_periodic_update(interval_seconds=60)`). When new, modified, or deleted files are detected in `data/customer_service/`, the vector store refreshes automatically without restarting Streamlit or requiring manual button clicks.
+  - **Periodic / Automatic Update Mechanism**: A background periodic update checker runs automatically every 60 seconds (`check_periodic_update(interval_seconds=60)`). When new, modified, or deleted files are detected in `datasets/customer_service/`, the vector store refreshes automatically without restarting Streamlit or requiring manual button clicks.
   - **UI Integration**: Real-time status display in Streamlit showing total indexed documents, vector chunks, last update timestamp, active periodic auto-sync status, manual sync triggers, new document ingestion forms, and live semantic test queries.
 
 ---
@@ -205,7 +205,7 @@ The application relies on four distinct datasets across the various operational 
 - **Implementation**:
   - `modules/sentiment/sentiment_analyzer.py`: NLTK VADER polarity scoring classifying customer messages into Positive, Neutral, or Negative based on compound polarity thresholds ($\ge 0.05$ positive, $\le -0.05$ negative, otherwise neutral).
   - **Dynamic Empathetic De-escalation**: Frustrated inquiries automatically trigger an apology prefix, empathetic tone instructions, and expedited warranty/return options.
-  - **Quantitative Benchmark Dataset**: Evaluated on `data/sentiment_test.csv` (30 customer service interactions).
+  - **Quantitative Benchmark Dataset**: Evaluated on `datasets/sentiment_test.csv` (30 customer service interactions).
   - *Evaluation Metrics*: See Section 18 and 19 for exact recalculated metrics.
 
 ---
@@ -238,7 +238,7 @@ The project includes an automated test suite located at `tests/test_all_tasks.py
 - **Test 2**: Validates multimodal image analysis and image generation fallback pipelines.
 - **Test 3**: Validates MedQuAD dataset loading, clinical entity extraction, and vector retrieval.
 - **Test 4**: Validates arXiv paper semantic search, structured 5-part summarization, and Plotly graph generation.
-- **Test 5**: Validates VADER sentiment classification, compound scoring, and quantitative evaluation on `data/sentiment_test.csv`.
+- **Test 5**: Validates VADER sentiment classification, compound scoring, and quantitative evaluation on `datasets/sentiment_test.csv`.
 - **Test 6**: Validates multilingual identification (EN, HI, ES, FR) and localized empathy templates.
 
 **Test Result**: 6/6 tests passing in 13.6 seconds (100% pass rate).
@@ -247,7 +247,7 @@ The project includes an automated test suite located at `tests/test_all_tasks.py
 
 ## 18. Evaluation
 
-The sentiment analysis model was evaluated on `data/sentiment_test.csv` using `scikit-learn` metrics.
+The sentiment analysis model was evaluated on `datasets/sentiment_test.csv` using `scikit-learn` metrics.
 
 ### Quantitative Benchmark Metrics
 

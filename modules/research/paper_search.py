@@ -9,7 +9,7 @@ class ArxivPaperSearch:
 
     def __init__(
         self,
-        data_path: str = "data/arxiv/arxiv_cs_papers.json",
+        data_path: str = "datasets/arxiv/arxiv_cs_papers.json",
         index_dir: str = "vectorstores/arxiv_index"
     ):
         self.data_path = data_path

@@ -30,10 +30,10 @@ def test_checklist():
     # -------------------------------------------------------------------------
     print(">>> STEP 0: Verifying Compliance Matrix & Local Datasets...")
     datasets = {
-        "Task 1 (Policies)": "data/customer_service/",
-        "Task 3 (MedQuAD)": "data/medquad/",
-        "Task 4 (arXiv CS)": "data/arxiv/arxiv_cs_papers.json",
-        "Task 5 (Sentiment)": "data/sentiment_test.csv"
+        "Task 1 (Policies)": "datasets/customer_service/",
+        "Task 3 (MedQuAD)": "datasets/medquad/",
+        "Task 4 (arXiv CS)": "datasets/arxiv/arxiv_cs_papers.json",
+        "Task 5 (Sentiment)": "datasets/sentiment_test.csv"
     }
     for name, path in datasets.items():
         exists = os.path.exists(path)
@@ -161,8 +161,8 @@ def test_checklist():
     # -------------------------------------------------------------------------
     print(">>> STEP 5: Verifying Task 5 — Sentiment Analytics & Benchmark...")
     sentiment_analyzer = SentimentAnalyzer()
-    print("  Evaluating model against 'data/sentiment_test.csv' (30 labeled customer service samples)...")
-    bench = sentiment_analyzer.evaluate_dataset()
+    print("  Evaluating model against 'datasets/sentiment_test.csv' (30 labeled customer service samples)...")
+    bench = sentiment_analyzer.evaluate_dataset("datasets/sentiment_test.csv")
     print(f"  Overall Accuracy : {bench['accuracy'] * 100:.1f}%")
     print(f"  Precision (Macro): {bench['precision_macro'] * 100:.1f}%")
     print(f"  Recall (Macro)   : {bench['recall_macro'] * 100:.1f}%")

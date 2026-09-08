@@ -10,7 +10,7 @@ class MedicalRetriever:
 
     def __init__(
         self,
-        data_path: str = "data/medquad/medquad_qa.json",
+        data_path: str = "datasets/medquad/medquad_qa.json",
         index_dir: str = "vectorstores/medquad_index"
     ):
         self.data_path = data_path

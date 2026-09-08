@@ -715,7 +715,7 @@ if nav_choice == "Task 1: Dynamic Knowledge Base":
 
     st.markdown(f"""
     <div class="info-box">
-        <b>Periodic Background Ingestion Engine:</b> A non-blocking background thread evaluates the document registry every 60 seconds. When new, modified, or deleted files are detected in <code>data/customer_service/</code>, the vector database is refreshed automatically without restarting the application.
+        <b>Periodic Background Ingestion Engine:</b> A non-blocking background thread evaluates the document registry every 60 seconds. When new, modified, or deleted files are detected in <code>datasets/customer_service/</code>, the vector database is refreshed automatically without restarting the application.
         <br><small><b>Last Check Status:</b> {stats.get('last_check_timestamp', 'Active')} — {kb_auto_check_status.get('message', 'Up to date')}</small>
     </div>
     """, unsafe_allow_html=True)
@@ -786,7 +786,7 @@ if nav_choice == "Task 1: Dynamic Knowledge Base":
         st.markdown("---")
         st.markdown("#### Manual Repository Re-indexing")
         if st.button("Execute Full Directory Rescan", use_container_width=True):
-            with st.spinner("Scanning data/customer_service/ for changes..."):
+            with st.spinner("Scanning datasets/customer_service/ for changes..."):
                 res = kb_manager.update_knowledge_base(force_reload=True)
                 st.success(res["message"])
                 st.rerun()
@@ -1096,7 +1096,7 @@ elif nav_choice == "Task 5: Sentiment Analytics & Benchmark":
         variant="mint"
     )
 
-    st.markdown("### Quantitative Evaluation on `data/sentiment_test.csv`")
+    st.markdown("### Quantitative Evaluation on `datasets/sentiment_test.csv`")
     st.caption("Recalculated empirical metrics across 30 labeled customer service interactions using scikit-learn:")
     
     eval_metrics = sentiment_analyzer.evaluate_dataset()
@@ -1228,7 +1228,7 @@ elif nav_choice == "System Audit & Compliance Matrix":
             "Task": "Task 1: Dynamic Knowledge Base",
             "Status": "VERIFIED (100%)",
             "Key Files": "modules/knowledge_base/",
-            "Dataset / Source": "data/customer_service/ (5 docs, 22 chunks)",
+            "Dataset / Source": "datasets/customer_service/ (5 docs, 22 chunks)",
             "How Evaluator Can Test": "Select 'Task 1: Dynamic Knowledge Base' -> Click 'Load Sample Policy' -> Click 'Ingest and Index' -> Check updated chunk count -> Query new info."
         },
         {
@@ -1256,7 +1256,7 @@ elif nav_choice == "System Audit & Compliance Matrix":
             "Task": "Task 5: Sentiment Analysis",
             "Status": "VERIFIED (100%)",
             "Key Files": "modules/sentiment/",
-            "Dataset / Source": "data/sentiment_test.csv (30 labeled samples)",
+            "Dataset / Source": "datasets/sentiment_test.csv (30 labeled samples)",
             "How Evaluator Can Test": "Select 'Task 5: Sentiment Analytics & Benchmark' -> View 76.7% accuracy & confusion matrix -> Test live phrase analyzer -> Chat in main bot with angry tone."
         },
         {
@@ -1271,10 +1271,10 @@ elif nav_choice == "System Audit & Compliance Matrix":
 
     st.markdown("### Dataset Audit Table")
     dataset_audit = [
-        {"Task": "Task 1", "Dataset / Source": "Customer Service Policies", "Local Path": "data/customer_service/", "Records": "5 files, 22 chunks", "Purpose": "Dynamic ingestion, SHA-256 change tracking, vector search"},
-        {"Task": "Task 3", "Dataset / Source": "NIH MedQuAD (abachaa/MedQuAD)", "Local Path": "data/medquad/", "Records": "116 QA pairs, 17 XMLs", "Purpose": "Clinical entity recognition & grounded medical Q&A"},
-        {"Task": "Task 4", "Dataset / Source": "Cornell University arXiv (CS Subset)", "Local Path": "data/arxiv/arxiv_cs_papers.json", "Records": "35 landmark papers", "Purpose": "Retrieval-augmented scientific assistant & concept graphs"},
-        {"Task": "Task 5", "Dataset / Source": "Customer Service Benchmark Split", "Local Path": "data/sentiment_test.csv", "Records": "30 labeled samples", "Purpose": "Empirical evaluation of VADER polarity scoring & empathy"}
+        {"Task": "Task 1", "Dataset / Source": "Customer Service Policies", "Local Path": "datasets/customer_service/", "Records": "5 files, 22 chunks", "Purpose": "Dynamic ingestion, SHA-256 change tracking, vector search"},
+        {"Task": "Task 3", "Dataset / Source": "NIH MedQuAD (abachaa/MedQuAD)", "Local Path": "datasets/medquad/", "Records": "116 QA pairs, 17 XMLs", "Purpose": "Clinical entity recognition & grounded medical Q&A"},
+        {"Task": "Task 4", "Dataset / Source": "Cornell University arXiv (CS Subset)", "Local Path": "datasets/arxiv/arxiv_cs_papers.json", "Records": "35 landmark papers", "Purpose": "Retrieval-augmented scientific assistant & concept graphs"},
+        {"Task": "Task 5", "Dataset / Source": "Customer Service Benchmark Split", "Local Path": "datasets/sentiment_test.csv", "Records": "30 labeled samples", "Purpose": "Empirical evaluation of VADER polarity scoring & empathy"}
     ]
     st.table(pd.DataFrame(dataset_audit))
 

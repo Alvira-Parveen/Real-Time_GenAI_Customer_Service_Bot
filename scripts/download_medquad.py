@@ -3,7 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 
-MEDQUAD_DIR = "data/medquad"
+MEDQUAD_DIR = "datasets/medquad"
 RAW_XML_DIR = os.path.join(MEDQUAD_DIR, "raw_xml")
 os.makedirs(RAW_XML_DIR, exist_ok=True)
 

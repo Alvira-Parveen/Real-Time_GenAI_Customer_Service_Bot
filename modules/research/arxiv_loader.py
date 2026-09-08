@@ -5,7 +5,7 @@ from typing import List, Dict, Any
 class ArxivLoader:
     """Loads and validates the Computer Science arXiv papers subset."""
 
-    def __init__(self, data_path: str = "data/arxiv/arxiv_cs_papers.json"):
+    def __init__(self, data_path: str = "datasets/arxiv/arxiv_cs_papers.json"):
         self.data_path = data_path
 
     def load_papers(self) -> List[Dict[str, Any]]:

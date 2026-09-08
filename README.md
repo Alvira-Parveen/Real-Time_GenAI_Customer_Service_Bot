@@ -108,11 +108,11 @@ flowchart TD
 
 | Task | Extension Name | Status | Dataset / Knowledge Source | Primary Module File | How Evaluator Can Verify |
 |:---|:---|:---:|:---|:---|:---|
-| **Task 1** | **Dynamic Knowledge Base** | **✅ IMPLEMENTED** | `data/customer_service/` (5 docs, 22 chunks) | `modules/knowledge_base/updater.py` | Add sample policy doc, observe vector index increment, query new policy immediately |
+| **Task 1** | **Dynamic Knowledge Base** | **✅ IMPLEMENTED** | `datasets/customer_service/` (5 docs, 22 chunks) | `modules/knowledge_base/updater.py` | Add sample policy doc, observe vector index increment, query new policy immediately |
 | **Task 2** | **Multimodal Chatbot (Vision & Image Gen)** | **✅ IMPLEMENTED** | Google Gemini Vision & Imagen 3 (with Local Fallback) | `modules/multimodal/` | Load demo cracked screen image, inspect visual defect report; generate concept visual card |
 | **Task 3** | **Medical Q&A Chatbot** | **✅ IMPLEMENTED** | [NIH MedQuAD Dataset](https://github.com/abachaa/MedQuAD) (116 QA pairs, 17 XMLs) | `modules/medical/` | Query medical conditions (e.g. Acromegaly), inspect clinical entities, grounded NIH answer, & disclaimer |
 | **Task 4** | **Scientific Expert Chatbot** | **✅ IMPLEMENTED** | [Cornell University arXiv CS Subset](https://www.kaggle.com/datasets/Cornell-University/arxiv) (35 papers) | `modules/research/` | Search papers, view 5-part summary, view intuitive vs. mathematical explanation, inspect Plotly graphs |
-| **Task 5** | **Sentiment Analysis & Empathy** | **✅ IMPLEMENTED** | `data/sentiment_test.csv` (30 benchmark samples) | `modules/sentiment/` | Chat with angry message to see negative badge + apology prefix; inspect 76.7% accuracy & confusion matrix |
+| **Task 5** | **Sentiment Analysis & Empathy** | **✅ IMPLEMENTED** | `datasets/sentiment_test.csv` (30 benchmark samples) | `modules/sentiment/` | Chat with angry message to see negative badge + apology prefix; inspect 76.7% accuracy & confusion matrix |
 | **Task 6** | **Multilingual Interaction** | **✅ IMPLEMENTED** | EN, HI (Devanagari), ES, FR Language Models | `modules/multilingual/` | Chat in Hindi, Spanish, or French; see auto-detected language badge and response in that language |
 
 ---
@@ -141,10 +141,10 @@ flowchart TD
 
 | Task | Dataset / Source | Local Path | Records / Files | Purpose |
 |:---|:---|:---|:---|:---|
-| **Task 1: Dynamic Knowledge Base** | Enterprise Customer Service Corpus (Policies, FAQ, Catalog, Warranty) | `data/customer_service/` | 5 documents, 22 semantic chunks | Dynamic knowledge ingestion, sliding-window chunking, SHA-256 change tracking, and vector search |
-| **Task 3: Medical Q&A** | [NIH MedQuAD Dataset](https://github.com/abachaa/MedQuAD) (Official GitHub Repository) | `data/medquad/` (`raw_xml/` & `medquad_qa.json`) | 116 QA pairs across 17 representative condition XMLs | Clinical entity recognition, semantic retrieval, and grounded medical Q&A with disclaimer |
-| **Task 4: Research Expert** | [Cornell University arXiv Dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) (CS Subset) | `data/arxiv/arxiv_cs_papers.json` | 35 landmark Computer Science papers | Retrieval-augmented scientific expert chatbot using an arXiv dataset subset (search, 5-part summarizer, math explanations, network graphs) |
-| **Task 5: Sentiment Analysis** | Customer Service Sentiment Benchmark Split | `data/sentiment_test.csv` | 30 labeled customer service interactions | Empirical demonstration evaluation of VADER polarity classification and empathy routing |
+| **Task 1: Dynamic Knowledge Base** | Enterprise Customer Service Corpus (Policies, FAQ, Catalog, Warranty) | `datasets/customer_service/` | 5 documents, 22 semantic chunks | Dynamic knowledge ingestion, sliding-window chunking, SHA-256 change tracking, and vector search |
+| **Task 3: Medical Q&A** | [NIH MedQuAD Dataset](https://github.com/abachaa/MedQuAD) (Official GitHub Repository) | `datasets/medquad/` (`raw_xml/` & `medquad_qa.json`) | 116 QA pairs across 17 representative condition XMLs | Clinical entity recognition, semantic retrieval, and grounded medical Q&A with disclaimer |
+| **Task 4: Research Expert** | [Cornell University arXiv Dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv) (CS Subset) | `datasets/arxiv/arxiv_cs_papers.json` | 35 landmark Computer Science papers | Retrieval-augmented scientific expert chatbot using an arXiv dataset subset (search, 5-part summarizer, math explanations, network graphs) |
+| **Task 5: Sentiment Analysis** | Customer Service Sentiment Benchmark Split | `datasets/sentiment_test.csv` | 30 labeled customer service interactions | Empirical demonstration evaluation of VADER polarity classification and empathy routing |
 
 ---
 
@@ -156,7 +156,7 @@ The foundation conversational agent represents **ApexTech**, an enterprise consu
 ### Task 1: Dynamic Knowledge Base for Chatbots
 - **Document Ingestion**: Supports `.txt`, `.md`, and `.pdf` files.
 - **SHA-256 Change Tracking**: Automatically registers new files, modifications, and deletions.
-- **Periodic / Automatic Update Mechanism**: A background periodic update check executes every 60 seconds (`check_periodic_update(interval_seconds=60)`). When new or modified documents are detected in `data/customer_service/`, the vector store updates automatically without restarting Streamlit.
+- **Periodic / Automatic Update Mechanism**: A background periodic update check executes every 60 seconds (`check_periodic_update(interval_seconds=60)`). When new or modified documents are detected in `datasets/customer_service/`, the vector store updates automatically without restarting Streamlit.
 - **Vector Search**: Cosine similarity retrieval over 384-dimensional dense vectors (`sentence-transformers/all-MiniLM-L6-v2`).
 
 ### Task 2: Multimodal Chatbot (Vision & Image Generation)
@@ -183,7 +183,7 @@ The foundation conversational agent represents **ApexTech**, an enterprise consu
 ### Task 5: Sentiment Analysis for Customer Service Bot
 - **Real-Time Scoring**: NLTK VADER polarity scoring (Positive $\ge 0.05$, Negative $\le -0.05$, Neutral).
 - **Empathetic De-escalation**: Frustrated inquiries automatically trigger an apology prefix, reassuring tone guidance, and expedited support routing.
-- **Quantitative Benchmark on `data/sentiment_test.csv` (30 samples)**:
+- **Quantitative Benchmark on `datasets/sentiment_test.csv` (30 samples)**:
   - **Accuracy**: **76.7%** (23 / 30 correct)
   - **Precision (Macro)**: **81.9%**
   - **Recall (Macro)**: **76.7%**
@@ -255,7 +255,7 @@ Customer_Service_Bot/
 ├── .env.example                       # API key configuration template
 ├── .gitignore                         # Git ignore file for secrets and environments
 ├── SUBMISSION_CHECKLIST.md            # Step-by-step submission checklist
-├── data/
+├── datasets/
 │   ├── customer_service/              # Corporate policy documents (FAQ, return, shipping, catalog, warranty)
 │   ├── medquad/                       # NIH MedQuAD dataset (JSON + 17 authentic XML files)
 │   ├── arxiv/                         # arXiv Computer Science paper dataset (JSON)

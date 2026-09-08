@@ -5,7 +5,7 @@ from typing import List, Dict, Any
 class MedQuADLoader:
     """Loads and preprocesses the official MedQuAD dataset."""
 
-    def __init__(self, data_path: str = "data/medquad/medquad_qa.json"):
+    def __init__(self, data_path: str = "datasets/medquad/medquad_qa.json"):
         self.data_path = data_path
 
     def load_qa_pairs(self) -> List[Dict[str, Any]]:

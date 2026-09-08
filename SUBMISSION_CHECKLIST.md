@@ -24,7 +24,7 @@
 - [ ] **`.gitignore`**: Configured to strictly ignore `.env`, `.venv/`, `__pycache__/`, `*.pyc`, and temporary files.
 - [ ] **`app.py`**: Unified multi-domain Streamlit application containing all six tasks.
 - [ ] **`modules/`**: Decoupled, modular Python packages (`knowledge_base`, `multimodal`, `medical`, `research`, `sentiment`, `multilingual`, `llm_client`).
-- [ ] **`data/`**: Verified local datasets (`customer_service/`, `medquad/`, `arxiv/`, `sentiment_test.csv`).
+- [ ] **`datasets/`**: Verified local datasets (`customer_service/`, `medquad/`, `arxiv/`, `sentiment_test.csv`).
 - [ ] **`tests/`**: Automated unit tests (`tests/test_all_tasks.py`).
 - [ ] **`report/`**: Comprehensive technical report (`report/project_report.md`).
 

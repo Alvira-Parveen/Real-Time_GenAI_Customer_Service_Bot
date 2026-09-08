@@ -69,7 +69,7 @@ class SentimentAnalyzer:
             "badge_color": badge_color
         }
 
-    def evaluate_dataset(self, csv_path: str = "data/sentiment_test.csv") -> Dict[str, Any]:
+    def evaluate_dataset(self, csv_path: str = "datasets/sentiment_test.csv") -> Dict[str, Any]:
         """Evaluates the sentiment model on the test dataset and calculates full metrics."""
         if not os.path.exists(csv_path):
             raise FileNotFoundError(f"Evaluation dataset not found at {csv_path}")

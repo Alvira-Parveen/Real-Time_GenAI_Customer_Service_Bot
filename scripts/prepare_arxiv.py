@@ -4,7 +4,7 @@ import json
 import xml.etree.ElementTree as ET
 import time
 
-ARXIV_DIR = "data/arxiv"
+ARXIV_DIR = "datasets/arxiv"
 os.makedirs(ARXIV_DIR, exist_ok=True)
 OUTPUT_FILE = os.path.join(ARXIV_DIR, "arxiv_cs_papers.json")
 

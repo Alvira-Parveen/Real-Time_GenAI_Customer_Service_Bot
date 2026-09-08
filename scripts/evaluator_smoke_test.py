@@ -41,7 +41,7 @@ def run_evaluator_smoke_test():
     # 1. TASK 1: Dynamic Knowledge Base
     # -------------------------------------------------------------------------
     print("\n[1/8] EVALUATING TASK 1: DYNAMIC KNOWLEDGE BASE")
-    kb_dir = "data/customer_service"
+    kb_dir = "datasets/customer_service"
     index_dir = "vectorstores/kb_index"
     updater = KnowledgeBaseManager(docs_dir=kb_dir, index_dir=index_dir)
     initial_stats = updater.get_stats()

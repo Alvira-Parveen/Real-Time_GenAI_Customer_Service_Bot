@@ -100,7 +100,7 @@ class TestInternshipBotTasks(unittest.TestCase):
         self.assertEqual(neg["label"], "negative")
 
         # Test quantitative evaluation on CSV
-        metrics = analyzer.evaluate_dataset("data/sentiment_test.csv")
+        metrics = analyzer.evaluate_dataset("datasets/sentiment_test.csv")
         self.assertIn("accuracy", metrics)
         self.assertIn("f1_macro", metrics)
         self.assertIn("confusion_matrix", metrics)

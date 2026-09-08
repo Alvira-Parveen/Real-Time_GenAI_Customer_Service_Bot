@@ -1,38 +1,38 @@
 {
   "faq.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/faq.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/faq.txt",
     "hash": "6a22afcdf349ffd2d28235940c201b4172a2ce39362e03f6a80856854ab8b9f8",
-    "mtime": 1788801094.3981752,
+    "mtime": 1788887366.2982645,
     "char_count": 1582
   },
   "holiday_extended_warranty_2026.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/holiday_extended_warranty_2026.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/holiday_extended_warranty_2026.txt",
     "hash": "77848a3fcb5697abeeecf386bb8282cf6ce498ccea335e53ba3d14695e6f82d1",
-    "mtime": 1788885741.192504,
+    "mtime": 1788887366.2977843,
     "char_count": 310
   },
   "product_information.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/product_information.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/product_information.txt",
     "hash": "5d585241d8b8283ce62917205232fc4ae6f787b581151aaca8d3dec4ecd19cb2",
-    "mtime": 1788801114.0218623,
+    "mtime": 1788887366.2972944,
     "char_count": 1801
   },
   "refund_policy.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/refund_policy.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/refund_policy.txt",
     "hash": "bcdae88a8f573fc516a53bbe8f041fa3a4c4d50309bd114bfdad25cfc180e585",
-    "mtime": 1788801101.0454514,
+    "mtime": 1788887366.2984989,
     "char_count": 1530
   },
   "shipping_policy.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/shipping_policy.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/shipping_policy.txt",
     "hash": "ada01405b1873689ccfc13238e51d17dedde6fdd3558f111b302be9d1e380737",
-    "mtime": 1788801107.6129625,
+    "mtime": 1788887366.297544,
     "char_count": 1491
   },
   "warranty_terms.txt": {
-    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/data/customer_service/warranty_terms.txt",
+    "filepath": "/Users/admin/Desktop/Customer_Service_Bot/datasets/customer_service/warranty_terms.txt",
     "hash": "7ec7d3bfbc0422e208d3d73ebdc53adf44a6e886771bb1a4835776948c6f837a",
-    "mtime": 1788801121.1148472,
+    "mtime": 1788887366.2980275,
     "char_count": 1019
   }
 }

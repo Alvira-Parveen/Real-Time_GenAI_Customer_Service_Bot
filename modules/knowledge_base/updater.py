@@ -12,7 +12,7 @@ class KnowledgeBaseManager:
     
     def __init__(
         self,
-        docs_dir: str = "data/customer_service",
+        docs_dir: str = "datasets/customer_service",
         index_dir: str = "vectorstores/kb_index",
         state_file: str = "vectorstores/kb_index/kb_state.json"
     ):
